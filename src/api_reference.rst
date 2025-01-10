@@ -1,0 +1,49 @@
+rgmol API
+=========
+
+All the functions, classes and methods are detailed in this manual.
+Details on how to get started can be found :doc:`here<tutorials>`.
+
+
+
+Atoms and Molecules
+-------------------
+
+.. toctree::
+	:maxdepth: 3
+	
+	objects
+	
+Extraction Functions from Outputs
+---------------------------------
+
+.. toctree::
+	:maxdepth: 3
+	
+	extract_adf
+	
+Representation Methods
+----------------------
+
+The representation methods can be used by multiple visualization packages. Such packages are matplotlib, plotly, pyvista
+
+
+.. toctree::
+	:maxdepth: 3
+	
+	plot
+	
+	
+Miscellaneous
+-------------
+
+Some functions that are used such as gaussain atomic orbitals
+
+.. toctree::
+	:maxdepth: 3
+
+	calculate_orbitals
+   
+
+	
+   
