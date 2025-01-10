@@ -1,0 +1,7 @@
+plot\_sphere module
+===================
+
+.. automodule:: plot_sphere
+   :members:
+   :undoc-members:
+   :show-inheritance:
