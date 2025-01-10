@@ -1,0 +1,26 @@
+.. rgmol documentation master file, created by
+   sphinx-quickstart on Wed Jan  8 16:09:56 2025.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to rgmol's documentation!
+=================================
+
+rgmol is a python package that intends to offer calculations and vizalisations of molecular properties. 
+
+rgmol API
+=========
+
+.. toctree::
+	:maxdepth: 2
+	
+	api_reference
+
+Tutorials
+=========
+
+.. toctree::
+	:maxdepth: 3
+	
+	tutorials
+   

@@ -1,0 +1,14 @@
+rgmol.objects.molecule
+======================
+
+.. autoclass:: objects::molecule
+	
+Methods
+-----------
+.. list-table::
+	
+    * - :doc:`list_properties<list_properties>`
+      - list all the properties       
+    * - :doc:`list_property<list_property>`
+      - list a property for each atom 
+

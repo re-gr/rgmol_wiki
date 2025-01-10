@@ -1,0 +1,10 @@
+molecule.plot_diagonalized_kernel
+=================================
+
+Method implemented for :
+ - pyvista (Recommended)
+
+.. autofunction:: plot_pyvista.plot_diagonalized_kernel
+
+	
+   
