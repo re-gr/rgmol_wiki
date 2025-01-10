@@ -1,14 +1,26 @@
-.. Example documentation master file, created by
-   sphinx-quickstart on Sat Sep 23 20:35:12 2023.
+.. rgmol documentation master file, created by
+   sphinx-quickstart on Wed Jan  8 16:09:56 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Example's documentation!
-===================================
+Welcome to rgmol's documentation!
+=================================
+
+rgmol is a python package that intends to offer calculations and vizalisations of molecular properties. 
+
+API Reference
+=============
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+	:maxdepth: 2
+	
+	api_reference
 
-   some-feature.md
-   another-feature.md
+Tutorials
+=========
+
+.. toctree::
+	:maxdepth: 3
+	
+	tutorials
+   
