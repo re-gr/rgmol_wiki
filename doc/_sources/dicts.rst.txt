@@ -1,0 +1,7 @@
+dicts module
+============
+
+.. automodule:: dicts
+   :members:
+   :undoc-members:
+   :show-inheritance:

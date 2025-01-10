@@ -1,0 +1,7 @@
+plot\_matplotlib module
+=======================
+
+.. automodule:: plot_matplotlib
+   :members:
+   :undoc-members:
+   :show-inheritance:

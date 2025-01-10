@@ -1,10 +1,122 @@
-Orbitals Calculations
-=====================
+Molecular Calculations
+======================
+
+| These functions are used for calculating various molecular functions, descriptors and voxel manipulation.
+| Most of these are used by the plotting methods automatically, use these methods only if you need to manipulate the functions.
+
+Orbital Calculations
+--------------------
+
+For orbital calculations, one needs to extract a molden file. This can be done in orca by using orca_2mkl.
+
+.. list-table::
+	
+    * - :doc:`calculate_AO<orbitals/calculate_AO>`
+      - calculate all the atomic orbitals
+    * - :doc:`calculate_MO<orbitals/calculate_MO>`
+      - calculate all the molecular orbitals
+    * - :doc:`calculate_MO_chosen<orbitals/calculate_MO_chosen>`
+      - calculate one molecular orbitals
 
 .. toctree::
-	:maxdepth: 2
+	:hidden:
+	
+	orbitals/calculate_AO
+	orbitals/calculate_MO
+	orbitals/calculate_MO_chosen
+ 
+TD-DFT Calculations
+-------------------
+
+For TD-DFT calculations, the inputs needs to be an excited states calculation. More information can be found :doc:`here<extract_excited_states>`.
+
+.. list-table::
+	
+    * - :doc:`calculate_transition_density<orbitals/calculate_transition_density>`
+      - calculate all the transition densities
+    * - :doc:`calculate_chosen_transition_density<orbitals/calculate_chosen_transition_density>`
+      - calculate a chosen transition density
+
+
+.. toctree::
+	:hidden:
+	
+	orbitals/calculate_transition_density
+	orbitals/calculate_chosen_transition_density
+
+
+CDFT Descriptors
+----------------
+
+.. list-table::
+	
+    * - :doc:`diagonalize_kernel<orbitals/diagonalize_kernel>`
+      - calculate and diagonalize a kernel
+    * - :doc:`calculate_linear_response_function_partial<orbitals/calculate_linear_response_partial>`
+      - calculate the non condensed linear response function using the partial method
+    * - :doc:`calculate_linear_response_function_total<orbitals/calculate_linear_response_total>`
+      - calculate the non condensed linear response function on the total space
+
+
+.. toctree::
+	:hidden:
+	
+	orbitals/diagonalize_kernel
+	orbitals/calculate_linear_response_partial
+	orbitals/calculate_linear_response_total
+
+
+
+Voxel Manipulation
+------------------
+
+
+.. list-table::
+	
+    * - :doc:`create_voxel_from_molecule<orbitals/create_voxel_from_molecule>`
+      - create a voxel around a molecule
+    * - :doc:`create_coordinates_from_voxel<orbitals/create_coordinates_from_voxel>`
+      - create space array from voxel
+
+
+
+.. toctree::
+	:hidden:
+	
+	orbitals/create_voxel_from_molecule   
+	orbitals/create_coordinates_from_voxel   
+ 
+
+	
+
+
+Gaussian Atomic Orbitals
+------------------------
+
+
+.. list-table::
+	
+    * - :doc:`orbital_s<orbitals/orbital_s>`
+      - function for calculating s orbital
+    * - :doc:`orbital_p<orbitals/orbital_p>`
+      - function for calculating p orbital
+    * - :doc:`orbital_d<orbitals/orbital_d>`
+      - function for calculating d orbital
+    * - :doc:`orbital_f<orbitals/orbital_f>`
+      - function for calculating f orbital
+    * - :doc:`orbital_g<orbitals/orbital_g>`
+      - function for calculating g orbital
+
+
+
+.. toctree::
+	:hidden:
 	
 	orbitals/orbital_s   
+	orbitals/orbital_p 
+	orbitals/orbital_d   
+	orbitals/orbital_f   
+	orbitals/orbital_g   
 
 	
    

@@ -5,7 +5,7 @@ Method implemented for :
  - pyvista (Recommended)
  - plotly
 
-.. autofunction:: plot_pyvista.plot_isodensity
+.. automethod:: plot_pyvista::molecule.plot_isodensity
 
 	
    

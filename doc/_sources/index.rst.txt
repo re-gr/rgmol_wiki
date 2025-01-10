@@ -6,7 +6,7 @@
 Welcome to rgmol's documentation!
 =================================
 
-rgmol is a python package that intends to offer calculations and vizalisations of molecular properties. 
+rgmol is a python package that intends to offer calculations and visualizations of molecular properties. 
 
 rgmol API
 =========

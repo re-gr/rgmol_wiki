@@ -4,8 +4,13 @@ Extraction from ADF Outputs
 Extract the whole output
 ------------------------
 
+.. list-table::
+	
+    * - :doc:`extract<extract_adf/extract>`
+      - extract all the useful information from an adf output
+
 .. toctree::
-	:maxdepth: 2
+	:hidden:
 	
 	extract_adf/extract
 
@@ -27,5 +32,12 @@ Extract part of the output
       - extract the condensed fukui functions
 
 
-
+.. toctree::
+	:hidden:
+	
+	extract_adf/extract_pos
+	extract_adf/extract_bonds
+	extract_adf/extract_global_descriptors
+	extract_adf/extract_ker
+	extract_adf/extract_fukui
    

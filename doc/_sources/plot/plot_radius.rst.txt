@@ -6,7 +6,8 @@ Method implemented for :
  - plotly
  - matplotlib
 
-.. autofunction:: plot_pyvista.plot_radius
+.. automethod:: plot_pyvista::molecule.plot_radius
+
 
 	
    

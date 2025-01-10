@@ -12,3 +12,8 @@ Methods
     * - :doc:`list_property<list_property>`
       - list a property for each atom 
 
+.. toctree::
+   :hidden:
+   
+   list_properties
+   list_property

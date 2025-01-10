@@ -1,4 +1,7 @@
-.. autofunction:: calculate_orbitals.gaussian_s
+molecular_calculations.gaussian_s
+=================================
+
+.. autofunction:: molecular_calculations.gaussian_s
 
 	
    

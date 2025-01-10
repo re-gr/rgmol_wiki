@@ -4,7 +4,7 @@ molecule.plot_diagonalized_kernel
 Method implemented for :
  - pyvista (Recommended)
 
-.. autofunction:: plot_pyvista.plot_diagonalized_kernel
+.. automethod:: plot_pyvista::molecule.plot_diagonalized_kernel
 
 	
    

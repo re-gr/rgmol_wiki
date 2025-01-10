@@ -6,7 +6,7 @@ Method implemented for :
  - plotly
  - matplotlib
 
-.. autofunction:: plot_pyvista.plot_property
+.. automethod:: plot_pyvista::molecule.plot_property
 
 	
    

@@ -2,9 +2,14 @@ Plotting Methods
 ================
 
 | The plotting methods produce visual outputs for multiple visualization packages.
-| In order to chose which package will be used, one needs to 
+| In order to chose which package will be used, one needs to import either :
+
+* **rgmol.plot_pyvista** (recommended)
+* rgmol.plot_matplotlib
+* rgmol.plot_plotly
 
 | All the plotting functions are identical regardless of the visualization package.
+| These functions will call the calculation functions with respect to what show.
 | Some of the functions are still not implemented for all packages, but will eventually.
 | The recommended visualization package is **pyvista** as most of the methods are tested on it. 
 | The other packages : matplotlib and plotly are not guaranteed to work properly.
@@ -44,6 +49,13 @@ Orbitals Molecule Methods
     * - :doc:`molecule.plot_transition_density<plot/plot_transition_density>`
       - calculate the transition densities from the MO and plot them
 	  
+.. toctree::
+	:hidden:
+	
+	plot/plot_AO
+	plot/plot_MO
+	plot/plot_transition_density
+	
 CDFT Molecule Methods
 ---------------------	  
 	 
@@ -54,7 +66,12 @@ CDFT Molecule Methods
     * - :doc:`molecule.plot_diagonalized_kernel<plot/plot_diagonalized_kernel>`
       - calculate, diagonalize and plot the eigenmode of a non condensed kernel
 	  
-	 
+.. toctree::
+	:hidden:
+	
+	plot/plot_diagonalized_condensed_kernel
+	plot/plot_diagonalized_kernel
+
 
 
 

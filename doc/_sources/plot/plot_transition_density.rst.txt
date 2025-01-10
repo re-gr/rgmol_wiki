@@ -4,7 +4,7 @@ molecule.plot_transition_density
 Method implemented for :
  - pyvista (Recommended)
 
-.. autofunction:: plot_pyvista.plot_transition_density
+.. automethod:: plot_pyvista::molecule.plot_transition_density
 
 	
    
