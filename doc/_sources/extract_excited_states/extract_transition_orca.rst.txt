@@ -1,5 +1,5 @@
-extract_excited_states.extract_transition_orca
-==============================================
+extract_orca.extract_transition
+===============================
 
-.. autofunction:: extract_excited_states.extract_transition_orca
+.. autofunction:: extract_orca.extract_transition
 

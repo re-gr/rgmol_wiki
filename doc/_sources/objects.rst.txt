@@ -2,7 +2,7 @@ Classes of objects
 ==================
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	
 	objects/atom
 	objects/molecule

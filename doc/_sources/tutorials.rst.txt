@@ -2,9 +2,29 @@ Tutorials
 =========
 
 
+
 Getting Started
 ---------------
 
+* :doc:`Installation<installation>`
+* :doc:`Quick Start<quick_start>`
 
 
+.. toctree::
+  :hidden:
+  
+  installation
+  quick_start
    
+Additional Informations
+-----------------------
+
+Here is the list of additional informations.
+	
+ * :doc:`Output Examples<examples>` 
+
+
+.. toctree::
+  :hidden:
+  
+  examples

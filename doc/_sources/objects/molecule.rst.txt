@@ -1,4 +1,4 @@
-rgmol.objects.molecule
+rgmol.molecule
 ======================
 
 .. autoclass:: objects::molecule

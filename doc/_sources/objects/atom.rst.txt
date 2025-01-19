@@ -1,4 +1,4 @@
-rgmol.objects.atom
+rgmol.atom
 ==================
 
 .. autoclass:: objects.atom

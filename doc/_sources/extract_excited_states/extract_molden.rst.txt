@@ -1,5 +1,5 @@
-extract_excited_states.extract_molden
-=====================================
+extract_molden.extract
+======================
 
-.. autofunction:: extract_excited_states.extract_molden
+.. autofunction:: extract_molden.extract
 

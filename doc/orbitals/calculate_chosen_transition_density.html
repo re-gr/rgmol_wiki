@@ -31,6 +31,8 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=68326204" />
   
   <!-- So that users can add custom icons -->
@@ -42,6 +44,10 @@
     <script src="../_static/documentation_options.js?v=2709fde1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'orbitals/calculate_chosen_transition_density';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -249,8 +255,8 @@
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../objects.html">Classes of objects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../objects/atom.html">rgmol.objects.atom</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../objects/molecule.html">rgmol.objects.molecule</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../objects/atom.html">rgmol.atom</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../objects/molecule.html">rgmol.molecule</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../objects/list_properties.html">molecule.list_properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../objects/list_property.html">molecule.list_property</a></li>
 </ul>
@@ -269,8 +275,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../extract_excited_states.html">Extract Excited States</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../extract_excited_states/extract_molden.html">extract_excited_states.extract_molden</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../extract_excited_states/extract_transition_orca.html">extract_excited_states.extract_transition_orca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extract_excited_states/extract_molden.html">extract_molden.extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extract_excited_states/extract_transition_orca.html">extract_orca.extract_transition</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../extract_cube.html">Extraction from Cube files</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -282,7 +288,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../plot.html">Plotting Methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_radius.html">molecule.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_property.html">molecule.plot_property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plot/plot_vector.html">molecule.plot_vector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_isodensity.html">molecule.plot_isodensity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_AO.html">molecule.plot_AO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_MO.html">molecule.plot_MO</a></li>
@@ -378,7 +383,7 @@
 <h1>molecule.calculate_chosen_transition_density<a class="headerlink" href="#molecule-calculate-chosen-transition-density" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="molecular_calculations.molecule.calculate_chosen_transition_density">
-<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">calculate_chosen_transition_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chosen_transition_density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.calculate_chosen_transition_density" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">calculate_chosen_transition_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chosen_transition_density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.calculate_chosen_transition_density" title="Link to this definition">#</a></dt>
 <dd><p>Calculates a chosen transition density for a molecule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -390,6 +395,26 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>transition_density</strong></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The transition densities are defined as</p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\rho_0^k = \sum_i c_i (Occ_i(r) * Virt_i(r))\)</span></div>
+<div class="line">With the sum being on all the transitions of the excitation, <span class="math notranslate nohighlight">\(Occ_i(r)\)</span> and <span class="math notranslate nohighlight">\(Virt_i(r)\)</span> being respectively the occupied and the virtual molecular orbitals considered in the transition, and <span class="math notranslate nohighlight">\(c_i\)</span> the coefficient of the transition.</div>
+</div>
+<p class="rubric">Examples</p>
+<p>For a TD-DFT calculation output :</p>
+<dl>
+<dt>STATE  1:  E=   0.148431 au      4.039 eV</dt><dd><div class="line-block">
+<div class="line">18a -&gt;  20a  :     0.5000 (c= 0.7071)</div>
+<div class="line">19a -&gt;  21a  :     0.5000 (c= -0.7071)</div>
+</div>
+</dd>
+<dt>The transition density will be :</dt><dd><div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\rho_0^1 =  c_1 (\psi_{18}(r) * \psi_{20}(r)) + c_2 (\psi_{19}(r) * \psi_{21}(r))\)</span></div>
+<div class="line">with <span class="math notranslate nohighlight">\(c_1 = 0.7071\)</span> and <span class="math notranslate nohighlight">\(c_2 = -0.7071\)</span></div>
+</div>
 </dd>
 </dl>
 </dd></dl>

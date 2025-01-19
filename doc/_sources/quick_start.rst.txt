@@ -1,0 +1,154 @@
+Quick Start
+===========
+
+
+Importing
+---------
+
+In order to use rgmol, one needs to import it using::
+
+  import rgmol
+  
+To choose pyvista as the visualization package, one needs to import::
+
+  import rgmol.plot_pyvista
+
+  
+or matplotlib or plotly::
+
+  #Importing either of them will replace the previously imported ones
+  import rgmol.plot_matplotlib
+  import rgmol.plot_plotly
+  
+ 
+| The recommended visualization package is **pyvista** as most of the methods are tested on it.
+| The other packages : matplotlib and plotly are not guaranteed to work properly.
+
+Atom Objects
+------------
+
+In rgmol, the atoms are objects that contain multiple attributes such as :
+ * atomic_number
+ * name (element name)
+ * pos (the position)
+ * properties (a dict containing various properties such as the radius used for plotting)
+ 
+The following code presents how to create and view the attributes of an atom ::
+
+  >>> import rgmol
+  >>> Carbon = rgmol.atom("C", [0.0,0.0,0.0])
+  >>> Carbon.atomic_number
+  6
+  >>> Carbon.name
+  'C'
+  >>> Hydrogen = rgmol.atom(1, [0.0,0.0,0.0])
+  >>> Hydrogen.name
+  'H'
+  >>> Hydrogen.atomic_number
+  1
+  >>> Carbon.pos
+  [0.0,0.0,0.0]
+  >>> Carbon.properties
+  {'radius': 0.99}
+  >>> Carbon.properties["electronegativity"] = 2.55
+  >>> Carbon.properties
+  {'electronegativity':2.55, 'radius': 0.99}
+  
+More details concerning atom objects can be found :doc:`here<objects/atom>`.
+
+Molecules Objects
+-----------------
+
+Molecules, such as atoms are objects introduced by rgmol. They contain the following attributes ::
+ * atoms (the list of the atoms in the molecule)
+ * bonds (the list of the bonds between the atoms)
+ * properties (a dict containing various properties of the molecule such as Molecular Orbitals arrays
+
+The bonds list contains lists of 3 integers : [position in the list of atom 1, position in the list of atom 2, order of the bond]
+ 
+The following code presents how to create and view the attributes of a dihydrogen molecule ::
+
+  >>> import rgmol
+  >>> H_1 = rgmol.atom(1, [0.0,0.0,0.0])
+  >>> H_2 = rgmol.atom("H", [1.0,0.0,0.0])
+  >>> Dihydrogen = rgmol.molecule([H_1,H_2], [0,1,1])
+  >>> Dihydrogen.atoms[0].name
+  'H'
+  >>> Dihydrogen.atoms[1].pos
+  [1.0, 0.0, 0.0]
+  >>> Dihydrogen.bonds
+  [0, 1, 1]
+  >>> Dihydrogen.properties["condensed function"] = [1.0, 0.0]
+  >>> Dihydrogen.list_properties()
+  ["condensed function"]
+  >>> Dihydrogen.list_property("radius")
+  array([0.83, 0.83])
+ 
+More details concerning molecules can be found :doc:`here<objects/molecule>`.
+
+Extracting Data from Calculation Outputs
+----------------------------------------
+
+Because it is tedious to import manually each atoms to construct a molecule, it is possible to extact data from calculation outputs.
+One just needs to use the following command ::
+  
+  molecule = rgmol.extract_<calculation_output_type>.extract(file)
+  
+The supported DFT calculation outputs are :
+ * ADF ::
+ 
+    molecule = rgmol.extract_adf.extract(file)
+ 
+ * Orca (only the extraction of excited states transition is implemented for now) ::
+ 
+     molecule = rgmol.extract_orca.extract_transition(file)
+ 
+ * Cube files ::
+ 
+     molecule = rgmol.extract_cube.extract(file)
+   
+ * Molden Files ::
+ 
+     molecule = rgmol.extract_molden.extract(file)
+ 
+Soon to be implemented outputs :
+ * XYZ Files
+ * Gaussian
+ 
+ 
+Plotting Molecules
+------------------
+
+In order to plot molecules, one should choose the python package used for visualization.
+
+As pyvista is the recommended one, the tutorial will focus on this one. But for other packages, more details can be found :doc:`here<plot>`.
+
+First, the package needs to be imported ::
+
+  import rgmol.plot_pyvista
+  
+This will add new methods for the molecule class that will allow the plotting of various properties of molecules.
+
+In order to simply plot the molecule, one needs to do ::
+
+  molecule.plot_radius()
+  
+The following commands is a detailed script that show a Chloromethane molecule from an ADF example output. The list of examples can be found :doc:`here<examples>`. ::
+
+  import rgmol
+  import rgmol.plot_pyvista
+  import rgmol.examples
+  
+  file = rgmol.examples.adf_CH3Cl
+  mol = rgmol.extract_adf.extract(file)
+  mol.plot_radius()
+  
+The expected output is :
+
+.. pyvista-plot::
+   :caption: A sphere
+   :include-source: False
+
+   >>> import pyvista
+   >>> sphere = pyvista.Sphere()
+   >>> out = sphere.plot()

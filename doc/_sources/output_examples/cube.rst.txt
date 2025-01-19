@@ -1,0 +1,16 @@
+Cube Files Examples
+-------------------
+
+First, the examples must be imported using ::
+
+  import rgmol.examples
+  
+The examples are from Formaldehyde calculations, M06 aug-cc-pvqz :
+
+ * The 8th Molecular Orbital ::
+ 
+	 file = rgmol.examples.cube_H2CO_MO8
+
+ * The 9th Molecular Orbital ::
+ 
+	 file = rgmol.examples.cube_H2CO_MO9

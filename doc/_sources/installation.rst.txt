@@ -1,0 +1,20 @@
+Installation
+============
+
+
+rgmol can be installed using pip::
+
+  pip install rgmol
+  
+This wil automatically install the depedencies :
+
+* `numpy <https://numpy.org/>`_
+* `scipy <https://scipy.org/>`_
+* `periodictable <https://github.com/python-periodictable/periodictable>`_
+* `pyvista <https://docs.pyvista.org/>`_
+
+Some visualization packages are supported but are not installed by default :
+
+* `matplotlib <https://matplotlib.org/>`_
+* `plotly <https://plotly.com/>`_
+

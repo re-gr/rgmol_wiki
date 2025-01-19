@@ -9,10 +9,8 @@ Plotting Methods
 * rgmol.plot_plotly
 
 | All the plotting functions are identical regardless of the visualization package.
-| These functions will call the calculation functions with respect to what show.
-| Some of the functions are still not implemented for all packages, but will eventually.
-| The recommended visualization package is **pyvista** as most of the methods are tested on it. 
-| The other packages : matplotlib and plotly are not guaranteed to work properly.
+| These functions call up the calculation functions depending on what is chosen to be displayed.
+| Some of the visualization functions are still not implemented for all packages, but will eventually.
 
 
 General Molecule Methods
@@ -24,8 +22,6 @@ General Molecule Methods
       - plot the radius of each atom   
     * - :doc:`molecule.plot_property<plot/plot_property>`
       - plot a property for each atom
-    * - :doc:`molecule.plot_vector<plot/plot_vector>`
-      - plot a vector on each atom
     * - :doc:`molecule.plot_isodensity<plot/plot_isodensity>`
       - plot the isodensity of a density
 	  
@@ -34,7 +30,6 @@ General Molecule Methods
 	
 	plot/plot_radius
 	plot/plot_property
-	plot/plot_vector
 	plot/plot_isodensity
 	  
 Orbitals Molecule Methods

@@ -8,9 +8,9 @@ Extract Excited States
 
 .. list-table::
 	
-    * - :doc:`extract_molden<extract_excited_states/extract_molden>`
+    * - :doc:`extract_molden.extract<extract_excited_states/extract_molden>`
       - extract the AO and MO from a molden file
-    * - :doc:`extract_transition_orca<extract_excited_states/extract_transition_orca>`
+    * - :doc:`extract_orca.extract_transition<extract_excited_states/extract_transition_orca>`
       - extract the transition coefficients from an orca TD-DFT output
 
 

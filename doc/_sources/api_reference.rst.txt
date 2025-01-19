@@ -10,7 +10,7 @@ Atoms and Molecules
 -------------------
 
 .. toctree::
-	:maxdepth: 3
+	:maxdepth: 2
 	
 	objects
 	
@@ -36,8 +36,8 @@ The representation methods can be used by multiple visualization packages. Such 
 	plot
 	
 	
-Miscellaneous
--------------
+Computation Methods
+-------------------
 
 Some functions that are used such as gaussain atomic orbitals
 
