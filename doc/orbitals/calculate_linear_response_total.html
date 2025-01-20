@@ -49,6 +49,7 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/asciinema-player_3.6.3.js?v=309f8ee8"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'orbitals/calculate_linear_response_total';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -385,7 +386,24 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="molecular_calculations.molecule.calculate_linear_response_function_total">
 <span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">calculate_linear_response_function_total</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.calculate_linear_response_function_total" title="Link to this definition">#</a></dt>
-<dd><p>Calculate the linear response function from the transition densities</p>
+<dd><p>Calculates the linear response function from the transition densities.</p>
+<p>This method calculates the linear response function on all the space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grid_points</strong> (<em>list</em><em> of </em><em>3</em>)</p></li>
+<li><p><strong>delta</strong> (<em>float</em><em>, </em><em>optional</em>) – the length added on all directions of the box containing all atomic centers</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>linear_response_function</strong> – The 6-dimensional kernel</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The linear response function kernel can be computed as :</p>
+<p><span class="math notranslate nohighlight">\(\chi(r,r') = -2\sum_{k\neq0} \frac{\rho_0^k(r) \rho_0^k(r')}{E_k-E_0}\)</span></p>
+<p>With <span class="math notranslate nohighlight">\(\rho_0^k\)</span> the transition density, and <span class="math notranslate nohighlight">\(E_k\)</span> the energy of the transition k.</p>
+<p>Therefore, the molecule needs the transition properties that can be extracted from a TD-DFT calculation, and the MO extracted from a molden file. More details can be found <a class="reference internal" href="../tuto/orbitals.html"><span class="doc">here</span></a>.</p>
 </dd></dl>
 
 </section>

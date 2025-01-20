@@ -49,6 +49,7 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/asciinema-player_3.6.3.js?v=309f8ee8"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'orbitals/diagonalize_kernel';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -384,8 +385,32 @@
 <h1>molecule.diagonalize_kernel<a class="headerlink" href="#molecule-diagonalize-kernel" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="molecular_calculations.molecule.diagonalize_kernel">
-<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">diagonalize_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_eigenvectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'total'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.diagonalize_kernel" title="Link to this definition">#</a></dt>
-<dd><p>diagonalize lineaar response function WIP</p>
+<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">diagonalize_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_eigenvectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'partial'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.diagonalize_kernel" title="Link to this definition">#</a></dt>
+<dd><p>Calculate and diagonalize the linear response function from the transition densities.</p>
+<p>This methods calls on the methods <a class="reference internal" href="calculate_linear_response_total.html"><span class="doc">molecule.calculate_linear_response_function_total</span></a> or <a class="reference internal" href="calculate_linear_response_partial.html"><span class="doc">molecule.calculate_linear_response_function_partial</span></a> in order to calculate the linear response function. Then it does the diagonalization using the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html">scipy.sparse.linalg.eigsh</a> function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kernel</strong> (<em>str</em>) – the name of the kernel, only the “linear_response_function” has been implemented yet.</p></li>
+<li><p><strong>number_eigenvectors</strong> (<em>int</em>) – the number of eigenvectors to be computed</p></li>
+<li><p><strong>grid_points</strong> (<em>list</em><em> of </em><em>3</em>)</p></li>
+<li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – the method used, either “partial” or “total”</p></li>
+<li><p><strong>delta</strong> (<em>float</em><em>, </em><em>optional</em>) – the length added on all directions of the box containing all atomic centers</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>eigenvalues,</strong></p></li>
+<li><p><strong>eigenvectors</strong></p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The linear response function kernel can be computed as :</p>
+<p><span class="math notranslate nohighlight">\(\chi(r,r') = -2\sum_{k\neq0} \frac{\rho_0^k(r) \rho_0^k(r')}{E_k-E_0}\)</span></p>
+<p>With <span class="math notranslate nohighlight">\(\rho_0^k\)</span> the transition density, and <span class="math notranslate nohighlight">\(E_k\)</span> the energy of the transition k.</p>
+<p>Therefore, the linear response function kernel can be computed using the MO calculated from molden file combined with the extraction of the coefficients from a TD-DFT calculation.</p>
+<p>For now, the eigenvalues are dependent on the number of points used in the grid, which is mathematically expected. This needs to be tackled in the near future.</p>
 </dd></dl>
 
 </section>

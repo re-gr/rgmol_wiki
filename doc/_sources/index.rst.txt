@@ -9,19 +9,25 @@ Welcome to rgmol's documentation!
 rgmol is a python package that intends to offer calculations and visualizations of molecular properties. 
 Its main purpose is to compute and visualize the condensed and non-condensed linear response function from CDFT.
 
-rgmol API
-=========
-
-.. toctree::
-	:maxdepth: 2
-	
-	api_reference
-
 Tutorials
 =========
+
+A detailed tutorial can be found in this part.
 
 .. toctree::
 	:maxdepth: 3
 	
 	tutorials
    
+
+
+rgmol API
+=========
+
+All the functions that can be used in rgmol are detailed in this part.
+
+.. toctree::
+	:maxdepth: 2
+	
+	api_reference
+

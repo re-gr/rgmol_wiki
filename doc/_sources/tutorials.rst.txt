@@ -16,15 +16,31 @@ Getting Started
   installation
   quick_start
    
+Plotting Methods
+----------------
+
+* :doc:`Visualization of Properties<tuto/visu_properties>`
+* :doc:`Orbitals Plotting<tuto/orbitals>`
+* :doc:`Diagonalization of Kernels<tuto/kernel>`
+
+.. toctree::
+  :hidden:
+  
+  tuto/visu_properties
+  tuto/orbitals
+  tuto/kernel
+
+
 Additional Informations
 -----------------------
 
-Here is the list of additional informations.
 	
- * :doc:`Output Examples<examples>` 
+* :doc:`Output Examples<examples>` 
+* :doc:`Example Script<tuto/example_script>`
 
 
 .. toctree::
   :hidden:
   
   examples
+  tuto/example_script

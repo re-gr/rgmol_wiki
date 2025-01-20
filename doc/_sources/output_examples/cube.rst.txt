@@ -11,6 +11,6 @@ The examples are from Formaldehyde calculations, M06 aug-cc-pvqz :
  
 	 file = rgmol.examples.cube_H2CO_MO8
 
- * The 9th Molecular Orbital ::
+ * The 59th Molecular Orbital ::
  
-	 file = rgmol.examples.cube_H2CO_MO9
+	 file = rgmol.examples.cube_H2CO_MO59

@@ -133,21 +133,9 @@ In order to simply plot the molecule, one needs to do ::
 
   molecule.plot_radius()
   
-The following commands is a detailed script that show a Chloromethane molecule from an ADF example output. The list of examples can be found :doc:`here<examples>`. ::
+The following commands is a detailed script that show a Chloromethane molecule from an ADF example output. The list of examples can be found :doc:`here<examples>`.
 
 
-.. pyvista-plot::
-   :context:
-   :include-source: False
-
-   # Configure for trame
-   import pyvista
-   pyvista.set_plot_theme('document')
-   pyvista.set_jupyter_backend('trame')
-   pyvista.global_theme.axes.show = False
-   pyvista.global_theme.smooth_shading = True
-   
-   
 .. pyvista-plot::
    
    import rgmol

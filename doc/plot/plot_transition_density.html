@@ -49,6 +49,7 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/asciinema-player_3.6.3.js?v=309f8ee8"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'plot/plot_transition_density';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -409,6 +410,26 @@ The grid is defined by the number of grid points and around the molecule. The de
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>None</strong> – The plotter should display when using this function</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The transition densities are defined as :</p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\rho_0^k = \sum_i c_i (Occ_i(r) * Virt_i(r))\)</span></div>
+<div class="line">With the sum being on all the transitions of the excitation, <span class="math notranslate nohighlight">\(Occ_i(r)\)</span> and <span class="math notranslate nohighlight">\(Virt_i(r)\)</span> being respectively the occupied and the virtual molecular orbitals considered in the transition, and <span class="math notranslate nohighlight">\(c_i\)</span> the coefficient of the transition.</div>
+</div>
+<p class="rubric">Examples</p>
+<p>For a TD-DFT calculation output :</p>
+<dl>
+<dt>STATE  1:  E=   0.148431 au      4.039 eV</dt><dd><div class="line-block">
+<div class="line">18a -&gt;  20a  :     0.5000 (c= 0.7071)</div>
+<div class="line">19a -&gt;  21a  :     0.5000 (c= -0.7071)</div>
+</div>
+</dd>
+<dt>The transition density will be :</dt><dd><div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\rho_0^1 =  c_1 (\psi_{18}(r) * \psi_{20}(r)) + c_2 (\psi_{19}(r) * \psi_{21}(r))\)</span></div>
+<div class="line">with <span class="math notranslate nohighlight">\(c_1 = 0.7071\)</span> and <span class="math notranslate nohighlight">\(c_2 = -0.7071\)</span></div>
+</div>
 </dd>
 </dl>
 </dd></dl>

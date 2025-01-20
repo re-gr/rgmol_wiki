@@ -1,0 +1,40 @@
+Diagonalization of Kernels
+==========================
+
+The non condensed kernel can be computed and their eigenmodes analyzed.
+
+For now, only the linear response function kernel has been implemented.
+
+Linear Response Function Kernel
+-------------------------------
+
+The linear response function kernel can be computed as :
+
+:math:`\chi(r,r') = -2\sum_{k\neq0} \frac{\rho_0^k(r) \rho_0^k(r')}{E_k-E_0}`
+
+With :math:`\rho_0^k` the transition density, and :math:`E_k` the energy of the transition k.
+
+
+Therefore, the linear response function kernel can be computed using the MO calculated from molden file combined with the extraction of the coefficients from a TD-DFT calculation.
+
+If one wants to use Orca for the TD-DFT calculation, triplets states should not be included and the keyword TPRINT 0.00001 will allow more transitions to be printed.
+
+The eigenmodes are sorted by eigenvalues. They can be selected using a slider. A script contaning all the examples can be found :doc:`here<example_script>`.
+
+
+Because the kernels are 6-dimensional, they scale up drastically in terms of memory used. That is why a partial method has been implemented which allows to remove the part of the space where the transition densities are almost zero. For each transition density, the space is sorted and the lower dense part that makes up to less than 1% is removed. In practice this removes as much as 90% of the space.
+
+As most of the eigenfunctions have a 0 eigenvalue, only a handfull of eigenmodes are calculated using the `scipy.sparse.linalg.eigsh <https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html>`_ function.
+
+For now, the eigenvalues are dependent on the number of points used in the grid, which is mathematically expected. This needs to be tackled in the near future.
+
+The following code is an example of the diagonalization of the linear response function kernel ::
+
+  import rgmol
+  import rgmol.plot_pyvista
+  import rgmol.examples
+
+  file = rgmol.examples.molden_H2CO
+  mol = rgmol.extract_molden.extract(file,do_find_bonds=1)
+  rgmol.extract_orca.extract_transition(rgmol.examples.orca_H2CO,mol=mol)
+  mol.plot_diagonalized_kernel(kernel="linear_response_function",grid_points=(50,50,50),number_eigenvectors=40,delta=10,cutoff=.2)

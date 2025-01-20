@@ -1,5 +1,5 @@
 Orca Output Examples
---------------------
+====================
 
 First, the examples must be imported using ::
 
