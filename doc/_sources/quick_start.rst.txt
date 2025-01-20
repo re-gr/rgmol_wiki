@@ -135,20 +135,26 @@ In order to simply plot the molecule, one needs to do ::
   
 The following commands is a detailed script that show a Chloromethane molecule from an ADF example output. The list of examples can be found :doc:`here<examples>`. ::
 
-  import rgmol
-  import rgmol.plot_pyvista
-  import rgmol.examples
-  
-  file = rgmol.examples.adf_CH3Cl
-  mol = rgmol.extract_adf.extract(file)
-  mol.plot_radius()
-  
-The expected output is :
 
 .. pyvista-plot::
-   :caption: A sphere
+   :context:
    :include-source: False
 
-   >>> import pyvista
-   >>> sphere = pyvista.Sphere()
-   >>> out = sphere.plot()
+   # Configure for trame
+   import pyvista
+   pyvista.set_plot_theme('document')
+   pyvista.set_jupyter_backend('trame')
+   pyvista.global_theme.axes.show = False
+   pyvista.global_theme.smooth_shading = True
+   
+   
+.. pyvista-plot::
+   
+   import rgmol
+   import rgmol.plot_pyvista
+   import rgmol.examples
+  
+   file = rgmol.examples.adf_CH3Cl
+   mol = rgmol.extract_adf.extract(file)
+   mol.plot_radius()
+
