@@ -1,0 +1,7 @@
+mult\_extrac\_adf module
+========================
+
+.. automodule:: mult_extrac_adf
+   :members:
+   :undoc-members:
+   :show-inheritance:
