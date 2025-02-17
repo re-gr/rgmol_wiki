@@ -50,6 +50,8 @@ CDFT Descriptors
 
 .. list-table::
 	
+    * - :doc:`calculate_eigenmodes_linear_response_function<orbitals/calculate_eigenmodes_linear_response_function>`
+      - calculate only the eigenmodes of the linear response function
     * - :doc:`diagonalize_kernel<orbitals/diagonalize_kernel>`
       - calculate and diagonalize a kernel
     * - :doc:`calculate_linear_response_function_partial<orbitals/calculate_linear_response_partial>`
@@ -61,6 +63,7 @@ CDFT Descriptors
 .. toctree::
 	:hidden:
 	
+	orbitals/calculate_eigenmodes_linear_response_function
 	orbitals/diagonalize_kernel
 	orbitals/calculate_linear_response_partial
 	orbitals/calculate_linear_response_total
