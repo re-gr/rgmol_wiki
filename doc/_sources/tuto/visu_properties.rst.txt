@@ -15,7 +15,6 @@ The following code plots the dual descriptor on a chloromethane molecule and dis
 .. pyvista-plot::
    
    import rgmol
-   import rgmol.plot_pyvista
    import rgmol.examples
         
    file = rgmol.examples.adf_CH3Cl
@@ -37,7 +36,6 @@ The following code plots the linear response function kernel on a chloromethane 
 .. pyvista-plot::
    
    import rgmol
-   import rgmol.plot_pyvista
    import rgmol.examples
         
    file = rgmol.examples.adf_CH3Cl

@@ -1,0 +1,11 @@
+group_molecules.plot_isodensity
+===============================
+
+Method implemented for :
+ - pyvista (Recommended)
+ - plotly
+
+.. automethod:: plot_pyvista::group_molecules.plot_isodensity
+
+	
+   

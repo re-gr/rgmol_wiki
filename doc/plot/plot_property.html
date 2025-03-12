@@ -6,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>molecule.plot_property &#8212; rgmol 0.1 documentation</title>
   
@@ -30,10 +30,10 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_3.6.3.css?v=27ec63de" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=68326204" />
   
   <!-- So that users can add custom icons -->
@@ -43,7 +43,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=2709fde1"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
@@ -262,6 +262,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../objects/list_property.html">molecule.list_property</a></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference internal" href="../objects/group_molecule.html">rgmol.group_molecules</a></li>
 </ul>
 </details></li>
 </ul>
@@ -290,11 +291,27 @@
 <li class="toctree-l2"><a class="reference internal" href="plot_radius.html">molecule.plot_radius</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">molecule.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_isodensity.html">molecule.plot_isodensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_multiple_isodensities.html">molecule.plot_multiple_isodensities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_AO.html">molecule.plot_AO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_MO.html">molecule.plot_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_product_MO.html">molecule.plot_product_MO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_transition_density.html">molecule.plot_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_diagonalized_condensed_kernel.html">molecule.plot_diagonalized_condensed_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_AO.html">group_molecules.plot_AO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_MO.html">group_molecules.plot_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_transition_density.html">group_molecules.plot_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_diagonalized_condensed_kernel.html">group_molecules.plot_diagonalized_condensed_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_diagonalized_kernel.html">group_molecules.plot_diagonalized_kernel</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../write.html">Writing Methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../write/write_cube.html">molecule.write_cube</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,6 +322,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/diagonalize_kernel.html">molecule.diagonalize_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_linear_response_partial.html">molecule.calculate_linear_response_function_partial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_linear_response_total.html">molecule.calculate_linear_response_function_total</a></li>
@@ -382,17 +400,9 @@
                   
   <section id="molecule-plot-property">
 <h1>molecule.plot_property<a class="headerlink" href="#molecule-plot-property" title="Link to this heading">#</a></h1>
-<dl class="simple">
-<dt>Method implemented for :</dt><dd><ul class="simple">
-<li><p>pyvista (Recommended)</p></li>
-<li><p>plotly</p></li>
-<li><p>matplotlib</p></li>
-</ul>
-</dd>
-</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="plot_pyvista.molecule.plot_property">
-<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">plot_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotted_property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plot_pyvista.molecule.plot_property" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">plot_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotted_property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screenshot_button</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size_screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1000,</span> <span class="pre">1000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plot_pyvista.molecule.plot_property" title="Link to this definition">#</a></dt>
 <dd><p>Plot a property for the entire molecule</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -403,6 +413,8 @@
 <li><p><strong>with_radius</strong> (<em>bool</em><em>, </em><em>optional</em>) – Chose to show the radius and the bonds between the atoms or not. By default True</p></li>
 <li><p><strong>opacity_radius</strong> (<em>float</em><em>, </em><em>optional</em>) – The opacity of the radius plot. By default .8</p></li>
 <li><p><strong>factor_radius</strong> (<em>float</em><em>, </em><em>optional</em>) – The factor by which the radius will be multiplied. By default .3</p></li>
+<li><p><strong>screenshot_button</strong> (<em>bool</em><em>, </em><em>optional</em>) – Adds a screenshot button. True by default</p></li>
+<li><p><strong>window_size_screenshot</strong> (<em>tuple</em><em>, </em><em>optional</em>) – The size of the screenshots. By default (1000,1000)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -470,7 +482,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

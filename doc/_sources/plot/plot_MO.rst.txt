@@ -1,8 +1,6 @@
 molecule.plot_MO
 ================
 
-Method implemented for :
- - pyvista (Recommended)
 
 .. automethod:: plot_pyvista::molecule.plot_MO
 

@@ -27,7 +27,7 @@ Extraction Functions from Outputs
 Representation Methods
 ----------------------
 
-The representation methods can be used by multiple visualization packages. Such packages are matplotlib, plotly, pyvista
+The representation methods that can be used for either molecules or group_molecules are listed here
 
 
 .. toctree::
@@ -35,11 +35,21 @@ The representation methods can be used by multiple visualization packages. Such 
 	
 	plot
 	
+Writing Methods
+---------------
+
+The writing methods are listed here
+
+.. toctree::
+  :maxdepth: 3
+  
+  write
+
 	
 Computation Methods
 -------------------
 
-Some functions that are used such as gaussain atomic orbitals
+Some functions that are used such as gaussian atomic orbitals
 
 .. toctree::
 	:maxdepth: 3

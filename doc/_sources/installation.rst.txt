@@ -13,8 +13,3 @@ This wil automatically install the depedencies :
 * `periodictable <https://github.com/python-periodictable/periodictable>`_
 * `pyvista <https://docs.pyvista.org/>`_
 
-Some visualization packages are supported but are not installed by default :
-
-* `matplotlib <https://matplotlib.org/>`_
-* `plotly <https://plotly.com/>`_
-

@@ -29,6 +29,16 @@ Plotting Methods
   tuto/visu_properties
   tuto/orbitals
   tuto/kernel
+  
+Writing Methods
+---------------
+
+* :doc:`Writing Files<tuto/write>`
+
+.. toctree::
+  :hidden:
+  
+  tuto/write
 
 
 Additional Informations

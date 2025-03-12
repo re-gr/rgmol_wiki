@@ -9,21 +9,7 @@ In order to use rgmol, one needs to import it using::
 
   import rgmol
   
-To choose pyvista as the visualization package, one needs to import::
-
-  import rgmol.plot_pyvista
-
-  
-or matplotlib or plotly::
-
-  #Importing either of them will replace the previously imported ones
-  import rgmol.plot_matplotlib
-  import rgmol.plot_plotly
-  
- 
-| The recommended visualization package is **pyvista** as most of the methods are tested on it.
-| The other packages : matplotlib and plotly are not guaranteed to work properly.
-
+q
 Atom Objects
 ------------
 
@@ -86,6 +72,7 @@ The following code presents how to create and view the attributes of a dihydroge
  
 More details concerning molecules can be found :doc:`here<objects/molecule>`.
 
+
 Extracting Data from Calculation Outputs
 ----------------------------------------
 
@@ -121,14 +108,6 @@ Plotting Molecules
 
 In order to plot molecules, one should choose the python package used for visualization.
 
-As pyvista is the recommended one, the tutorial will focus on this one. But for other packages, more details can be found :doc:`here<plot>`.
-
-First, the package needs to be imported ::
-
-  import rgmol.plot_pyvista
-  
-This will add new methods for the molecule class that will allow the plotting of various properties of molecules.
-
 In order to simply plot the molecule, one needs to do ::
 
   molecule.plot_radius()
@@ -139,10 +118,32 @@ The following commands is a detailed script that show a Chloromethane molecule f
 .. pyvista-plot::
    
    import rgmol
-   import rgmol.plot_pyvista
    import rgmol.examples
   
    file = rgmol.examples.adf_CH3Cl
    mol = rgmol.extract_adf.extract(file)
    mol.plot_radius()
 
+Plotting Multiple Molecules
+---------------------------
+
+One can plot multiple molecules using the group molecules object.
+They are built using a list of molecules ::
+
+.. pyvista-plot::
+   
+   import rgmol
+   import rgmol.examples
+  
+   list_molecules = []
+  
+   file = rgmol.examples.adf_CH4
+   mol = rgmol.extract_adf.extract(file)
+   list_molecules.append(mol)
+   
+   file2 = rgmol.examples.adf_CH3Cl
+   mol2 = rgmol.extract_adf.extract(file)
+   list_molecules.append(mol2)
+   
+   group_mol = rgmol.group_molecules(list_molecules)
+   group_mol.plot_radius()

@@ -6,7 +6,6 @@ The following script can be found in the package.
 It contains each of the examples in the tutorials. ::
 
   import rgmol
-  import rgmol.plot_pyvista
   import rgmol.examples
 
   if __name__=="__main__":

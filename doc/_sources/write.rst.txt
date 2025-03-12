@@ -1,7 +1,15 @@
-write module
-============
+Writing Methods
+===============
 
-.. automodule:: write
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Cube Files
+----------
+
+.. list-table::
+	
+    * - :doc:`molecule.write_cube<write/write_cube>`
+      - writes the cube file of a chosen 3D vector   
+
+.. toctree::
+    :hidden:
+  
+    write/write_cube

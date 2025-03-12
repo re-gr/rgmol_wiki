@@ -1,10 +1,6 @@
 molecule.plot_property
 ======================
 
-Method implemented for :
- - pyvista (Recommended)
- - plotly
- - matplotlib
 
 .. automethod:: plot_pyvista::molecule.plot_property
 

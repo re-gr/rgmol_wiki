@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>write module &#8212; rgmol 0.1 documentation</title>
+    <title>Writing Methods &#8212; rgmol 0.1 documentation</title>
   
   
   
@@ -31,6 +31,10 @@
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/asciinema-player_3.6.3.css?v=27ec63de" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=68326204" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -41,9 +45,15 @@
     <script src="_static/documentation_options.js?v=2709fde1"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/asciinema-player_3.6.3.js?v=309f8ee8"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'write';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="molecule.write_cube" href="write/write_cube.html" />
+    <link rel="prev" title="group_molecules.plot_diagonalized_kernel" href="plot_group_molecules/plot_diagonalized_kernel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -123,15 +133,15 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="api_reference.html">
-    rgmol API
+  <a class="nav-link nav-internal" href="tutorials.html">
+    Tutorials
   </a>
 </li>
 
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="plot_pyvista.html">
-    plot_pyvista module
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="api_reference.html">
+    rgmol API
   </a>
 </li>
 
@@ -178,10 +188,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -209,15 +215,15 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="api_reference.html">
-    rgmol API
+  <a class="nav-link nav-internal" href="tutorials.html">
+    Tutorials
   </a>
 </li>
 
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="plot_pyvista.html">
-    plot_pyvista module
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="api_reference.html">
+    rgmol API
   </a>
 </li>
 
@@ -248,7 +254,89 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"></div>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="objects.html">Classes of objects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="objects/atom.html">rgmol.atom</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="objects/molecule.html">rgmol.molecule</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="objects/list_properties.html">molecule.list_properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects/list_property.html">molecule.list_property</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="objects/group_molecule.html">rgmol.group_molecules</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="extract_adf.html">Extraction from ADF Outputs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf/extract.html">rgmol.extract_adf.extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf/extract_pos.html">rgmol.extract_adf.extract_pos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf/extract_bonds.html">rgmol.extract_adf.extract_bonds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf/extract_global_descriptors.html">rgmol.extract_adf.extract_global_descriptors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf/extract_ker.html">rgmol.extract_adf.extract_condensed_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf/extract_fukui.html">rgmol.extract_adf.extract_fukui</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="extract_excited_states.html">Extract Excited States</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="extract_excited_states/extract_molden.html">extract_molden.extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_excited_states/extract_transition_orca.html">extract_orca.extract_transition</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="extract_cube.html">Extraction from Cube files</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="extract_cube/extract.html">extract_cube.extract</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="plot.html">Plotting Methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_radius.html">molecule.plot_radius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_property.html">molecule.plot_property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_isodensity.html">molecule.plot_isodensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_multiple_isodensities.html">molecule.plot_multiple_isodensities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_AO.html">molecule.plot_AO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_MO.html">molecule.plot_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_product_MO.html">molecule.plot_product_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_transition_density.html">molecule.plot_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_diagonalized_condensed_kernel.html">molecule.plot_diagonalized_condensed_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_AO.html">group_molecules.plot_AO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_MO.html">group_molecules.plot_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_transition_density.html">group_molecules.plot_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_diagonalized_condensed_kernel.html">group_molecules.plot_diagonalized_condensed_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_diagonalized_kernel.html">group_molecules.plot_diagonalized_kernel</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Writing Methods</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="write/write_cube.html">molecule.write_cube</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="calculate_orbitals.html">Molecular Calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_AO.html">molecule.calculate_AO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_MO.html">molecule.calculate_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/diagonalize_kernel.html">molecule.diagonalize_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_linear_response_partial.html">molecule.calculate_linear_response_function_partial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_linear_response_total.html">molecule.calculate_linear_response_function_total</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/create_voxel_from_molecule.html">molecular_calculations.create_voxel_from_molecule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/create_coordinates_from_voxel.html">molecular_calculations.create_coordinates_from_voxel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_s.html">molecular_calculations.gaussian_s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_p.html">molecular_calculations.gaussian_p</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_d.html">molecular_calculations.gaussian_d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_f.html">molecular_calculations.gaussian_f</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_g.html">molecular_calculations.gaussian_g</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
 </nav></div>
     </div>
   
@@ -287,7 +375,10 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">write module</span></li>
+    
+    <li class="breadcrumb-item"><a href="api_reference.html" class="nav-link">rgmol API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Writing Methods</span></li>
   </ul>
 </nav>
 </div>
@@ -304,94 +395,21 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="module-write">
-<span id="write-module"></span><h1>write module<a class="headerlink" href="#module-write" title="Link to this heading">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="write.output_comp">
-<span class="sig-prename descclassname"><span class="pre">write.</span></span><span class="sig-name descname"><span class="pre">output_comp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#write.output_comp" title="Link to this definition">#</a></dt>
-<dd><p>Write the product of the fukui functions and their diagonalization in a .txt file
-Outputs the eigenvals and eigenvalue of the functions</p>
-<dl class="simple">
-<dt>Input<span class="classifier">file (str)</span></dt><dd><p>L  (ndarray)    condensed linear response kernel
-S0 (ndarray)    condensed local softness kernel computed with f0
-Sp (ndarray)    condensed local softness kernel computed with f+
-Sm (ndarray)    condensed local softness kernel computed with f-
-fp (ndarray)    f+
-fm (ndarray)    f-
-f0 (ndarray)
-f2 (ndarray)    f(2)
-Name (list of str); name of the atoms</p>
-</dd>
-</dl>
-<p>Outputs :</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="write.write_analogy">
-<span class="sig-prename descclassname"><span class="pre">write.</span></span><span class="sig-name descname"><span class="pre">write_analogy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#write.write_analogy" title="Link to this definition">#</a></dt>
-<dd><p>Write the alpha coefficients and the mutual capacitance according to the electrical analogy for both the condensed linear response and the softness kernel</p>
-<dl class="simple">
-<dt>Input<span class="classifier">file (str)</span></dt><dd><p>L  (ndarray)    condensed linear response kernel
-Name (list of str); name of the atoms</p>
-</dd>
-</dl>
-<p>Outputs :   None</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="write.write_fukui">
-<span class="sig-prename descclassname"><span class="pre">write.</span></span><span class="sig-name descname"><span class="pre">write_fukui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#write.write_fukui" title="Link to this definition">#</a></dt>
-<dd><p>Write the product of the fukui functions and their diagonalization in a .txt file
-Outputs the eigenvals and eigenvalue of the functions</p>
-<dl class="simple">
-<dt>Input<span class="classifier">file (str)</span></dt><dd><p>fp (ndarray); f+
-fm (ndarray); f-
-f0 (ndarray)
-f2 (ndarray); f(2)
-Name (list of str); name of the atoms</p>
-</dd>
-<dt>Outputs<span class="classifier">Fpvp (ndarray); eigenvals of f+</span></dt><dd><p>FpV (ndarray); eigenvectors of f+
-Fmvp (ndarray); eigenvals of f-
-FmV (ndarray); eigenvectors of f-
-F0vp (ndarray); eigenvals of f0
-F0V (ndarray); eigenvectors of f0
-F2vp (ndarray); eigenvals of f2
-F2V (ndarray); eigenvectors of f2</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="write.write_lrls">
-<span class="sig-prename descclassname"><span class="pre">write.</span></span><span class="sig-name descname"><span class="pre">write_lrls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#write.write_lrls" title="Link to this definition">#</a></dt>
-<dd><p>Write the linear response and local softness kernels, their diagonalization and the latex table in a .txt file
-Outputs the eigenvals and eigenvectors of the functions</p>
-<dl class="simple">
-<dt>Input<span class="classifier">file (str)</span></dt><dd><p>L   (ndarray)    condensed linear response kernel
-S0  (ndarray)    condensed local softness kernel S0
-Sp  (ndarray)    condensed local softness kernel S+
-Sm  (ndarray)    condensed local softness kernel S-
-Name (list of str); name of the atoms</p>
-</dd>
-<dt>Outputs<span class="classifier">Lvp (ndarray); eigenvals of L</span></dt><dd><p>LV (ndarray); eigenvectors of L
-Svp (ndarray); eigenvals of S
-SV (ndarray); eigenvectors of S</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="write.write_m">
-<span class="sig-prename descclassname"><span class="pre">write.</span></span><span class="sig-name descname"><span class="pre">write_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#write.write_m" title="Link to this definition">#</a></dt>
-<dd><p>Writes the matrix M inside the file f
-Input :     f       (str) file</p>
-<blockquote>
-<div><p>Name    (list) the name of the atoms
-M       (2D array or list) the matrix</p>
-</div></blockquote>
-<p>Outputs :   None</p>
-</dd></dl>
-
+  <section id="writing-methods">
+<h1>Writing Methods<a class="headerlink" href="#writing-methods" title="Link to this heading">#</a></h1>
+<section id="cube-files">
+<h2>Cube Files<a class="headerlink" href="#cube-files" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="write/write_cube.html"><span class="doc">molecule.write_cube</span></a></p></td>
+<td><p>writes the cube file of a chosen 3D vector</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
 </section>
 
 
@@ -404,43 +422,30 @@ M       (2D array or list) the matrix</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="plot_group_molecules/plot_diagonalized_kernel.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">group_molecules.plot_diagonalized_kernel</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="write/write_cube.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">molecule.write_cube</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write.output_comp"><code class="docutils literal notranslate"><span class="pre">output_comp()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write.write_analogy"><code class="docutils literal notranslate"><span class="pre">write_analogy()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write.write_fukui"><code class="docutils literal notranslate"><span class="pre">write_fukui()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write.write_lrls"><code class="docutils literal notranslate"><span class="pre">write_lrls()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write.write_m"><code class="docutils literal notranslate"><span class="pre">write_m()</span></code></a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/write.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div></div>
-
-</div></div>
               
             
           </div>
@@ -460,16 +465,6 @@ M       (2D array or list) the matrix</p>
 <div class="bd-footer__inner bd-page-width">
   
     <div class="footer-items__start">
-      
-        <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright 2025, re-gr.
-      <br/>
-    
-  </p>
-</div>
       
         <div class="footer-item">
 

@@ -6,6 +6,7 @@ Classes of objects
 	
 	objects/atom
 	objects/molecule
+	objects/group_molecule
 
 	
    

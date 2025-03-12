@@ -1,9 +1,6 @@
 molecule.plot_isodensity
 ========================
 
-Method implemented for :
- - pyvista (Recommended)
- - plotly
 
 .. automethod:: plot_pyvista::molecule.plot_isodensity
 

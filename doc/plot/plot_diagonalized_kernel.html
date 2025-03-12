@@ -6,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>molecule.plot_diagonalized_kernel &#8212; rgmol 0.1 documentation</title>
   
@@ -30,10 +30,10 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_3.6.3.css?v=27ec63de" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=68326204" />
   
   <!-- So that users can add custom icons -->
@@ -43,7 +43,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=2709fde1"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
@@ -52,7 +52,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'plot/plot_diagonalized_kernel';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Molecular Calculations" href="../calculate_orbitals.html" />
+    <link rel="next" title="group_molecules.plot_radius" href="../plot_group_molecules/plot_radius.html" />
     <link rel="prev" title="molecule.plot_diagonalized_condensed_kernel" href="plot_diagonalized_condensed_kernel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -262,6 +262,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../objects/list_property.html">molecule.list_property</a></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference internal" href="../objects/group_molecule.html">rgmol.group_molecules</a></li>
 </ul>
 </details></li>
 </ul>
@@ -290,11 +291,27 @@
 <li class="toctree-l2"><a class="reference internal" href="plot_radius.html">molecule.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_property.html">molecule.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_isodensity.html">molecule.plot_isodensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_multiple_isodensities.html">molecule.plot_multiple_isodensities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_AO.html">molecule.plot_AO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_MO.html">molecule.plot_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_product_MO.html">molecule.plot_product_MO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_transition_density.html">molecule.plot_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_diagonalized_condensed_kernel.html">molecule.plot_diagonalized_condensed_kernel</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">molecule.plot_diagonalized_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_AO.html">group_molecules.plot_AO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_MO.html">group_molecules.plot_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_transition_density.html">group_molecules.plot_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_diagonalized_condensed_kernel.html">group_molecules.plot_diagonalized_condensed_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_diagonalized_kernel.html">group_molecules.plot_diagonalized_kernel</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../write.html">Writing Methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../write/write_cube.html">molecule.write_cube</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,6 +322,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/diagonalize_kernel.html">molecule.diagonalize_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_linear_response_partial.html">molecule.calculate_linear_response_function_partial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_linear_response_total.html">molecule.calculate_linear_response_function_total</a></li>
@@ -382,15 +400,9 @@
                   
   <section id="molecule-plot-diagonalized-kernel">
 <h1>molecule.plot_diagonalized_kernel<a class="headerlink" href="#molecule-plot-diagonalized-kernel" title="Link to this heading">#</a></h1>
-<dl class="simple">
-<dt>Method implemented for :</dt><dd><ul class="simple">
-<li><p>pyvista (Recommended)</p></li>
-</ul>
-</dd>
-</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="plot_pyvista.molecule.plot_diagonalized_kernel">
-<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">plot_diagonalized_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'only</span> <span class="pre">eigenmodes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotting_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'isodensity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_eigenvectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">20,</span> <span class="pre">20)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_isodensities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plot_pyvista.molecule.plot_diagonalized_kernel" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">plot_diagonalized_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'only</span> <span class="pre">eigenmodes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotting_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'isodensity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_eigenvectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">20,</span> <span class="pre">20)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_isodensities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screenshot_button</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size_screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1000,</span> <span class="pre">1000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plot_pyvista.molecule.plot_diagonalized_kernel" title="Link to this definition">#</a></dt>
 <dd><p>Calculate and diagonalize a kernel. Only the linear response function is implemented for now.
 Only the first number_eigenvectors will be computed to limit the calculation time.
 The grid is defined by the number of grid points and around the molecule. The delta defines the length to be added to the extremities of the position of the atoms.</p>
@@ -400,16 +412,18 @@ The grid is defined by the number of grid points and around the molecule. The de
 <li><p><strong>kernel</strong> (<em>str</em>) – The kernel to be diagonalized and plotted</p></li>
 <li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – The method of calculation of the kernel, only eigenmodes by default. More information can be found in the notes.</p></li>
 <li><p><strong>plotting_method</strong> (<em>str</em><em>, </em><em>optional</em>) – The method used for plotting. By default isodensity. The other methods are : “multiple isodensities”, “volume”</p></li>
-<li><p><strong>number_eigenvectors</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of eigenvectors to be computed</p></li>
+<li><p><strong>number_eigenvectors</strong> (<em>int</em><em>, </em><em>optional</em>) – Only used in the methods “total” and “partial”. The number of eigenvectors to be computed</p></li>
 <li><p><strong>grid_points</strong> (<em>list</em><em> of </em><em>3</em><em>, </em><em>optional</em>) – The number of points for the grid in each dimension. By default (40,40,40)</p></li>
 <li><p><strong>delta</strong> (<em>float</em><em>, </em><em>optional</em>) – The length added on all directions of the box containing all atomic centers. By default 3</p></li>
-<li><p><strong>cutoff</strong> (<em>float</em><em>, </em><em>optional</em>) – The cutoff of the isodensity plot for the isodensity plotting method. By default .2</p></li>
+<li><p><strong>cutoff</strong> (<em>float</em><em>, </em><em>optional</em>) – The initial cutoff of the isodensity plot for the isodensity plotting method. By default .2</p></li>
 <li><p><strong>number_isodensities</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of isodensities to be plotted if the method used is multiple isodensities</p></li>
 <li><p><strong>opacity</strong> (<em>float</em><em>, </em><em>optional</em>) – The opacity of the plot. By default .5</p></li>
 <li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) – The factor by which the plotted_property will be multiplied. By default 1</p></li>
 <li><p><strong>with_radius</strong> (<em>bool</em><em>, </em><em>optional</em>) – Chose to show the radius and the bonds between the atoms or not. By default True</p></li>
 <li><p><strong>opacity_radius</strong> (<em>float</em><em>, </em><em>optional</em>) – The opacity of the radius plot. By default .8</p></li>
 <li><p><strong>factor_radius</strong> (<em>float</em><em>, </em><em>optional</em>) – The factor by which the radius will be multiplied. By default .3</p></li>
+<li><p><strong>screenshot_button</strong> (<em>bool</em><em>, </em><em>optional</em>) – Adds a screenshot button. True by default</p></li>
+<li><p><strong>window_size_screenshot</strong> (<em>tuple</em><em>, </em><em>optional</em>) – The size of the screenshots. By default (1000,1000)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -419,7 +433,8 @@ The grid is defined by the number of grid points and around the molecule. The de
 <p class="rubric">Notes</p>
 <p>Because the kernels are 6-dimensional, they scale up drastically in terms of memory used.
 If one only wants to look at the eigenmodes, the “only eigenmodes” method is just that. It computes the eigenmodes without computing the total kernel. More info can be found <a class="reference internal" href="../orbitals/calculate_eigenmodes_linear_response_function.html"><span class="doc">here</span></a>.
-Otherwise, the partial method has been implemented which allows to remove the part of the space where the transition densities are almost zero. For each transition density, the space is sorted and the lower dense part that makes up to less than 1% is removed. In practice this removes as much as 90% of the space. More details on this method can be found <a class="reference internal" href="../orbitals/diagonalize_kernel.html"><span class="doc">here</span></a>.</p>
+Otherwise, the partial method has been implemented which allows to remove the part of the space where the transition densities are almost zero. For each transition density, the space is sorted and the lower dense part that makes up to less than 1% is removed. In practice this removes as much as 90% of the space. More details on this method can be found <a class="reference internal" href="../orbitals/diagonalize_kernel.html"><span class="doc">here</span></a>.
+The last method is “total” which is just the calculation of the linear response on the whole space</p>
 </dd></dl>
 
 </section>
@@ -444,11 +459,11 @@ Otherwise, the partial method has been implemented which allows to remove the pa
       </div>
     </a>
     <a class="right-next"
-       href="../calculate_orbitals.html"
+       href="../plot_group_molecules/plot_radius.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Molecular Calculations</p>
+        <p class="prev-next-title">group_molecules.plot_radius</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -481,7 +496,7 @@ Otherwise, the partial method has been implemented which allows to remove the pa
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

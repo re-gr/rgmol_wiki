@@ -6,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>extract_molden.extract &#8212; rgmol 0.1 documentation</title>
   
@@ -30,10 +30,10 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_3.6.3.css?v=27ec63de" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=68326204" />
   
   <!-- So that users can add custom icons -->
@@ -43,7 +43,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=2709fde1"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
@@ -262,6 +262,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../objects/list_property.html">molecule.list_property</a></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference internal" href="../objects/group_molecule.html">rgmol.group_molecules</a></li>
 </ul>
 </details></li>
 </ul>
@@ -290,11 +291,27 @@
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_radius.html">molecule.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_property.html">molecule.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_isodensity.html">molecule.plot_isodensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_multiple_isodensities.html">molecule.plot_multiple_isodensities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_AO.html">molecule.plot_AO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_MO.html">molecule.plot_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_product_MO.html">molecule.plot_product_MO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_transition_density.html">molecule.plot_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_diagonalized_condensed_kernel.html">molecule.plot_diagonalized_condensed_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_AO.html">group_molecules.plot_AO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_MO.html">group_molecules.plot_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_transition_density.html">group_molecules.plot_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_diagonalized_condensed_kernel.html">group_molecules.plot_diagonalized_condensed_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_diagonalized_kernel.html">group_molecules.plot_diagonalized_kernel</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../write.html">Writing Methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../write/write_cube.html">molecule.write_cube</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,6 +322,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/diagonalize_kernel.html">molecule.diagonalize_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_linear_response_partial.html">molecule.calculate_linear_response_function_partial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_linear_response_total.html">molecule.calculate_linear_response_function_total</a></li>
@@ -391,7 +409,7 @@ use an algorithm that tries to find bonds. It is still in WIP</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>file</strong> (<em>str</em>)</p></li>
+<li><p><strong>file</strong> (<em>str</em>) – </p></li>
 <li><p><strong>do_find_bonds</strong> (<em>bool</em><em>, </em><em>optional</em>) – if one wants to use an algorithm to find the bonds (WIP)</p></li>
 </ul>
 </dd>
@@ -460,7 +478,7 @@ use an algorithm that tries to find bonds. It is still in WIP</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
