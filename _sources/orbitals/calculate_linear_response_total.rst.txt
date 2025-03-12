@@ -1,0 +1,7 @@
+molecule.calculate_linear_response_function_total
+=================================================
+
+.. automethod:: molecular_calculations::molecule.calculate_linear_response_function_total
+
+	
+   

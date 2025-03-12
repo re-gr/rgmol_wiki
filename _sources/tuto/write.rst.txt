@@ -1,0 +1,12 @@
+Write
+-----
+
+This part shows how to write files with rgmol.
+For now only cube files can be written.
+
+
+Writing cube files
+******************
+
+
+One can use the method :doc:`molecule.write_cube<../write/write_cube>` to write a cube file containing a certain vector.

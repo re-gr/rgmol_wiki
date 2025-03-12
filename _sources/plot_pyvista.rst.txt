@@ -1,0 +1,7 @@
+plot\_pyvista module
+====================
+
+.. automodule:: plot_pyvista
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,61 @@
+rgmol API
+=========
+
+All the functions, classes and methods are detailed in this manual.
+Details on how to get started can be found :doc:`here<tutorials>`.
+
+
+
+Atoms and Molecules
+-------------------
+
+.. toctree::
+	:maxdepth: 2
+	
+	objects
+	
+Extraction Functions from Outputs
+---------------------------------
+
+.. toctree::
+	:maxdepth: 3
+	
+	extract_adf
+	extract_excited_states
+	extract_cube
+	
+Representation Methods
+----------------------
+
+The representation methods that can be used for either molecules or group_molecules are listed here
+
+
+.. toctree::
+	:maxdepth: 3
+	
+	plot
+	
+Writing Methods
+---------------
+
+The writing methods are listed here
+
+.. toctree::
+  :maxdepth: 3
+  
+  write
+
+	
+Computation Methods
+-------------------
+
+Some functions that are used such as gaussian atomic orbitals
+
+.. toctree::
+	:maxdepth: 3
+
+	calculate_orbitals
+   
+
+	
+   

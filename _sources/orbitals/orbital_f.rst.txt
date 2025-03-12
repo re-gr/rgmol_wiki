@@ -1,0 +1,7 @@
+molecular_calculations.gaussian_f
+=================================
+
+.. autofunction:: molecular_calculations.gaussian_f
+
+	
+   

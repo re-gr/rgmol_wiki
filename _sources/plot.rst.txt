@@ -1,0 +1,127 @@
+Plotting Methods
+================
+
+**update** As of version 0.1.2.1, only pyvista is now used to produce visual outputs.
+
+Molecules Methods
+*****************
+
+General Molecule Methods
+------------------------
+
+.. list-table::
+	
+    * - :doc:`molecule.plot_radius<plot/plot_radius>`
+      - plot the radius of each atom   
+    * - :doc:`molecule.plot_property<plot/plot_property>`
+      - plot a property for each atom
+    * - :doc:`molecule.plot_isodensity<plot/plot_isodensity>`
+      - plot the isodensity of a density
+    * - :doc:`molecule.plot_multiple_isodensities<plot/plot_multiple_isodensities>`
+      - plot multiple isodensities from multiple files
+	  
+.. toctree::
+	:hidden:
+	
+	plot/plot_radius
+	plot/plot_property
+	plot/plot_isodensity
+	plot/plot_multiple_isodensities
+	  
+Orbitals Molecule Methods
+-------------------------
+
+.. list-table::
+  
+    * - :doc:`molecule.plot_AO<plot/plot_AO>`
+      - plot the atomic orbitals
+    * - :doc:`molecule.plot_MO<plot/plot_MO>`
+      - plot the molecular orbitals
+    * - :doc:`molecule.plot_product_MO<plot/plot_product_MO>`
+      - calculates and plots the product of MOs
+    * - :doc:`molecule.plot_transition_density<plot/plot_transition_density>`
+      - calculate the transition densities from the MO and plot them
+	  
+.. toctree::
+	:hidden:
+	
+	plot/plot_AO
+	plot/plot_MO
+	plot/plot_product_MO
+	plot/plot_transition_density
+	
+CDFT Molecule Methods
+---------------------	  
+	 
+.. list-table::
+
+    * - :doc:`molecule.plot_diagonalized_condensed_kernel<plot/plot_diagonalized_condensed_kernel>`
+      - calculate, diagonalize and plot the eigenmodes of a condensed kernel
+    * - :doc:`molecule.plot_diagonalized_kernel<plot/plot_diagonalized_kernel>`
+      - calculate, diagonalize and plot the eigenmodes of a non condensed kernel
+	  
+.. toctree::
+	:hidden:
+	
+	plot/plot_diagonalized_condensed_kernel
+	plot/plot_diagonalized_kernel
+
+
+
+Group Molecules Methods
+***********************
+   
+
+General Group Molecule Methods
+------------------------------
+
+.. list-table::
+	
+    * - :doc:`group_molecules.plot_radius<plot/plot_radius>`
+      - plot the radius of each atom
+    * - :doc:`group_molecules.plot_property<plot/plot_property>`
+      - plot a property for each atom
+    * - :doc:`group_molecules.plot_isodensity<plot/plot_isodensity>`
+      - plot the isodensity of a density
+	  
+.. toctree::
+	:hidden:
+	
+	plot_group_molecules/plot_radius
+	plot_group_molecules/plot_property
+	plot_group_molecules/plot_isodensity
+	  
+Orbitals Group Molecule Methods
+-------------------------------
+
+.. list-table::
+  
+    * - :doc:`group_molecules.plot_AO<plot/plot_AO>`
+      - plot the atomic orbitals
+    * - :doc:`group_molecules.plot_MO<plot/plot_MO>`
+      - plot the molecular orbitals
+    * - :doc:`group_molecules.plot_transition_density<plot/plot_transition_density>`
+      - calculate the transition densities from the MO and plot them
+	  
+.. toctree::
+	:hidden:
+	
+	plot_group_molecules/plot_AO
+	plot_group_molecules/plot_MO
+	plot_group_molecules/plot_transition_density
+	
+CDFT Group Molecule Methods
+---------------------------
+	 
+.. list-table::
+
+    * - :doc:`group_molecules.plot_diagonalized_condensed_kernel<plot/plot_diagonalized_condensed_kernel>`
+      - diagonalize and plot each eigenmode of a condensed kernel
+    * - :doc:`group_molecules.plot_diagonalized_kernel<plot/plot_diagonalized_kernel>`
+      - calculate, diagonalize and plot the eigenmode of a non condensed kernel
+	  
+.. toctree::
+	:hidden:
+	
+	plot_group_molecules/plot_diagonalized_condensed_kernel
+	plot_group_molecules/plot_diagonalized_kernel

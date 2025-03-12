@@ -1,0 +1,43 @@
+Visualization of Properties
+---------------------------
+
+This part is mostly used for CDFT calculations which were performed using ADF.
+
+Local Condensed Vectors
+***********************
+
+The local condensed vectors of atoms can be plotted as sphere around each atoms.
+
+The method used to do that is the :doc:`molecule.plot_property<../plot/plot_property>`.
+
+The following code plots the dual descriptor on a chloromethane molecule and displays the expected result.
+
+.. pyvista-plot::
+   
+   import rgmol
+   import rgmol.examples
+        
+   file = rgmol.examples.adf_CH3Cl
+   mol = rgmol.extract_adf.extract(file)
+   mol.plot_property("dual",factor=1.5)
+
+
+Diagonalization of Local Condensed Kernels
+******************************************
+
+The eigenmodes of local condensed kernels such as the linear response function or the condensed softness kernels can be plotted.
+
+The method used to plot these kernels is :doc:`molecule.plot_diagonalized_condensed_kernel<../plot/plot_diagonalized_condensed_kernel>`
+
+Each mode can be selected using a slider which cannot be accessed using the interactive scene. A script contaning all the examples can be found :doc:`here<example_script>`.
+
+The following code plots the linear response function kernel on a chloromethane molecule and displays the expected result.
+
+.. pyvista-plot::
+   
+   import rgmol
+   import rgmol.examples
+        
+   file = rgmol.examples.adf_CH3Cl
+   mol = rgmol.extract_adf.extract(file)
+   mol.plot_diagonalized_condensed_kernel("condensed linear response")

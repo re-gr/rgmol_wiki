@@ -1,0 +1,14 @@
+Extraction from Cube files
+==========================
+
+
+.. list-table::
+	
+    * - :doc:`extract<extract_cube/extract>`
+      - extract all the useful information from a cube file
+
+.. toctree::
+	:hidden:
+	
+	extract_cube/extract
+
