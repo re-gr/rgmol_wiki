@@ -1,11 +1,6 @@
 group_molecules.plot_property
 =============================
 
-Method implemented for :
- - pyvista (Recommended)
- - plotly
- - matplotlib
-
 .. automethod:: plot_pyvista::group_molecules.plot_property
 
 	

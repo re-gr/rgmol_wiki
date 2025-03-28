@@ -17,6 +17,8 @@ For orbital calculations, one needs to extract a molden file. This can be done i
       - calculate all the molecular orbitals
     * - :doc:`calculate_MO_chosen<orbitals/calculate_MO_chosen>`
       - calculate one molecular orbitals
+    * - :doc:`calculate_electron_density<orbitals/calculate_electron_density>`
+      - calculate the electron density
 
 .. toctree::
 	:hidden:
@@ -24,11 +26,12 @@ For orbital calculations, one needs to extract a molden file. This can be done i
 	orbitals/calculate_AO
 	orbitals/calculate_MO
 	orbitals/calculate_MO_chosen
+	orbitals/calculate_electron_density
  
 TD-DFT Calculations
 -------------------
 
-For TD-DFT calculations, the inputs needs to be an excited states calculation. More information can be found :doc:`here<extract_excited_states>`.
+For TD-DFT calculations, the inputs needs to be an excited states calculation. More information can be found :doc:`here<extract_orca>`.
 
 .. list-table::
 	
@@ -50,23 +53,25 @@ CDFT Descriptors
 
 .. list-table::
 	
-    * - :doc:`calculate_eigenmodes_linear_response_function<orbitals/calculate_eigenmodes_linear_response_function>`
+	
+    * - :doc:`calculate_hardness<cdft/calculate_hardness>`
+      - calculate the global hardness of the molecule
+    * - :doc:`calculate_fukui_function<cdft/calculate_fukui_function>`
+      - calculate the fukui function of the molecule
+    * - :doc:`calculate_eigenmodes_linear_response_function<cdft/calculate_eigenmodes_linear_response_function>`
       - calculate only the eigenmodes of the linear response function
-    * - :doc:`diagonalize_kernel<orbitals/diagonalize_kernel>`
-      - calculate and diagonalize a kernel
-    * - :doc:`calculate_linear_response_function_partial<orbitals/calculate_linear_response_partial>`
-      - calculate the non condensed linear response function using the partial method
-    * - :doc:`calculate_linear_response_function_total<orbitals/calculate_linear_response_total>`
-      - calculate the non condensed linear response function on the total space
+    * - :doc:`calculate_softness_kernel_eigenmodes<cdft/calculate_softness_kernel_eigenmodes>`
+      - calculate only the eigenmodes of the softness kernel
+
 
 
 .. toctree::
 	:hidden:
 	
-	orbitals/calculate_eigenmodes_linear_response_function
-	orbitals/diagonalize_kernel
-	orbitals/calculate_linear_response_partial
-	orbitals/calculate_linear_response_total
+	cdft/calculate_hardness
+	cdft/calculate_fukui_function
+	cdft/calculate_eigenmodes_linear_response_function
+	cdft/calculate_softness_kernel_eigenmodes
 
 
 

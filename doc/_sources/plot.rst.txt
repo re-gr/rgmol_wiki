@@ -57,6 +57,8 @@ CDFT Molecule Methods
 
     * - :doc:`molecule.plot_diagonalized_condensed_kernel<plot/plot_diagonalized_condensed_kernel>`
       - calculate, diagonalize and plot the eigenmodes of a condensed kernel
+    * - :doc:`molecule.plot_fukui_function<plot/plot_fukui_function>`
+      - calculate and plot one fukui function
     * - :doc:`molecule.plot_diagonalized_kernel<plot/plot_diagonalized_kernel>`
       - calculate, diagonalize and plot the eigenmodes of a non condensed kernel
 	  
@@ -64,9 +66,21 @@ CDFT Molecule Methods
 	:hidden:
 	
 	plot/plot_diagonalized_condensed_kernel
+	plot/plot_fukui_function
 	plot/plot_diagonalized_kernel
 
+Other Molecule Methods
+----------------------
 
+.. list-table::
+
+    * - :doc:`molecule.plot_dipole_moment<plot/plot_dipole_moment>`
+      - plot the different dipole moment of a molecule
+
+.. toctree::
+    :hidden:
+    
+    plot/plot_dipole_moment
 
 Group Molecules Methods
 ***********************
@@ -117,11 +131,8 @@ CDFT Group Molecule Methods
 
     * - :doc:`group_molecules.plot_diagonalized_condensed_kernel<plot/plot_diagonalized_condensed_kernel>`
       - diagonalize and plot each eigenmode of a condensed kernel
-    * - :doc:`group_molecules.plot_diagonalized_kernel<plot/plot_diagonalized_kernel>`
-      - calculate, diagonalize and plot the eigenmode of a non condensed kernel
 	  
 .. toctree::
 	:hidden:
 	
 	plot_group_molecules/plot_diagonalized_condensed_kernel
-	plot_group_molecules/plot_diagonalized_kernel

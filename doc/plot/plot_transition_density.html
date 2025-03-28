@@ -277,8 +277,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../extract_adf/extract_fukui.html">rgmol.extract_adf.extract_fukui</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../extract_excited_states.html">Extract Excited States</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../extract_molden.html">Extract Excited States</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../extract_excited_states/extract_molden.html">extract_molden.extract</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../extract_orca.html">Extract Orca</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../extract_excited_states/extract_transition_orca.html">extract_orca.extract_transition</a></li>
 </ul>
 </details></li>
@@ -298,7 +301,9 @@
 <li class="toctree-l2"><a class="reference internal" href="plot_product_MO.html">molecule.plot_product_MO</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">molecule.plot_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_diagonalized_condensed_kernel.html">molecule.plot_diagonalized_condensed_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_fukui_function.html">molecule.plot_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_dipole_moment.html">molecule.plot_dipole_moment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
@@ -306,7 +311,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_MO.html">group_molecules.plot_MO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_transition_density.html">group_molecules.plot_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_diagonalized_condensed_kernel.html">group_molecules.plot_diagonalized_condensed_kernel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_diagonalized_kernel.html">group_molecules.plot_diagonalized_kernel</a></li>
 </ul>
 </details></li>
 </ul>
@@ -321,12 +325,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_AO.html">molecule.calculate_AO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_MO.html">molecule.calculate_MO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_electron_density.html">molecule.calculate_electron_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/diagonalize_kernel.html">molecule.diagonalize_kernel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_linear_response_partial.html">molecule.calculate_linear_response_function_partial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_linear_response_total.html">molecule.calculate_linear_response_function_total</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_hardness.html">molecule.calculate_hardness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_fukui_function.html">molecule.calculate_fukui_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_softness_kernel_eigenmodes.html">molecule.calculate_softness_kernel_eigenmodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/create_voxel_from_molecule.html">molecular_calculations.create_voxel_from_molecule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/create_coordinates_from_voxel.html">molecular_calculations.create_coordinates_from_voxel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/orbital_s.html">molecular_calculations.gaussian_s</a></li>
@@ -403,7 +408,7 @@
 <h1>molecule.plot_transition_density<a class="headerlink" href="#molecule-plot-transition-density" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="plot_pyvista.molecule.plot_transition_density">
-<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">plot_transition_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(40,</span> <span class="pre">40,</span> <span class="pre">40)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screenshot_button</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size_screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1000,</span> <span class="pre">1000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plot_pyvista.molecule.plot_transition_density" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">plot_transition_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(100,</span> <span class="pre">100,</span> <span class="pre">100)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screenshot_button</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size_screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1000,</span> <span class="pre">1000)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#plot_pyvista.molecule.plot_transition_density" title="Link to this definition">#</a></dt>
 <dd><p>Plot the Transition Densities of a molecule.
 All the AO and the MO will be calculated on the grid if they were not calculated.
 The grid is defined by the number of grid points and around the molecule. The delta defines the length to be added to the extremities of the position of the atoms.</p>

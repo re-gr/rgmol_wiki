@@ -1,0 +1,7 @@
+molecule.calculate_fukui_function
+=================================
+
+.. automethod:: molecular_calculations::molecule.calculate_fukui_function
+
+	
+   

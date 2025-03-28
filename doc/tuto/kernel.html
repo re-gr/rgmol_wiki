@@ -53,8 +53,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tuto/kernel';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Write" href="write.html" />
-    <link rel="prev" title="Orbitals Plotting" href="orbitals.html" />
+    <link rel="next" title="CDFT Descriptors" href="dipole_moment.html" />
+    <link rel="prev" title="CDFT Descriptors" href="cdft.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -262,7 +262,9 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="visu_properties.html">Visualization of Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="orbitals.html">Orbitals Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdft.html">CDFT Descriptors</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Diagonalization of Kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dipole_moment.html">CDFT Descriptors</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="write.html">Write</a></li>
@@ -348,9 +350,7 @@
 <p>Therefore, the linear response function kernel can be computed using the MO calculated from molden file combined with the extraction of the coefficients from a TD-DFT calculation.</p>
 <p>If one wants to use Orca for the TD-DFT calculation, triplets states should not be included and the keyword TPRINT 0.00001 will allow more transitions to be printed.</p>
 <p>The eigenmodes are sorted by eigenvalues. They can be selected using a slider. A script contaning all the examples can be found <a class="reference internal" href="example_script.html"><span class="doc">here</span></a>.</p>
-<p>Because the kernels are 6-dimensional, they scale up drastically in terms of memory used.
-If one only wants to compute the eigenmodes of the Linear Response function, a method that computes only the eigenmodes without calculating the kernel as a whole as been implemented and is the default.</p>
-<p>Otherwise, a partial method has been implemented which allows to remove the part of the space where the transition densities are almost zero. For each transition density, the space is sorted and the lower dense part that makes up to less than 1% is removed. In practice this removes as much as 90% of the space. As most of the eigenfunctions have a 0 eigenvalue, only a handfull of eigenmodes are calculated using the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html">scipy.sparse.linalg.eigsh</a> function.</p>
+<p>Only the eigenmodes are computed using this method.</p>
 <p>The following code is an example of the diagonalization of the linear response function kernel</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rgmol</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">rgmol.examples</span>
@@ -359,6 +359,26 @@ If one only wants to compute the eigenmodes of the Linear Response function, a m
 <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_find_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_transition</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
 <span class="n">mol</span><span class="o">.</span><span class="n">plot_diagonalized_kernel</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;linear_response_function&quot;</span><span class="p">,</span><span class="n">grid_points</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span><span class="n">delta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="softness-kernel">
+<h2>Softness Kernel<a class="headerlink" href="#softness-kernel" title="Link to this heading">#</a></h2>
+<p>Using the Parr-Berkowitz relation, one can compute the softness kernel from the linear response, the fukui functions and the hardness of the molecule.</p>
+<p><span class="math notranslate nohighlight">\(s(r,r') = -\chi(r,r') + \frac{f(r)f(r')}{\eta}\)</span></p>
+<p>One needs to look at the computation of the linear response function, and the <a class="reference internal" href="cdft.html"><span class="doc">fukui function</span></a> in order to know which arguments and calculations has to be made.</p>
+<p>The following code is an example of the diagonalization of the softness kernel</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rgmol</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rgmol.examples</span>
+
+<span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_find_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_transition</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
+
+<span class="n">file_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO_m</span>
+<span class="n">mol_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_find_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">mol</span><span class="o">.</span><span class="n">plot_diagonalized_kernel</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;softness_kernel&quot;</span><span class="p">,</span><span class="n">mol_m</span><span class="o">=</span><span class="n">mol_m</span><span class="p">,</span><span class="n">fukui_type</span><span class="o">=</span><span class="s2">&quot;f-&quot;</span><span class="p">,</span><span class="n">grid_points</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span><span class="n">delta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -375,20 +395,20 @@ If one only wants to compute the eigenmodes of the Linear Response function, a m
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="orbitals.html"
+       href="cdft.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Orbitals Plotting</p>
+        <p class="prev-next-title">CDFT Descriptors</p>
       </div>
     </a>
     <a class="right-next"
-       href="write.html"
+       href="dipole_moment.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Write</p>
+        <p class="prev-next-title">CDFT Descriptors</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

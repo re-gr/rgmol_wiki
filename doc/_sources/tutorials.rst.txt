@@ -21,14 +21,18 @@ Plotting Methods
 
 * :doc:`Visualization of Properties<tuto/visu_properties>`
 * :doc:`Orbitals Plotting<tuto/orbitals>`
+* :doc:`CDFT descriptors<tuto/cdft>`
 * :doc:`Diagonalization of Kernels<tuto/kernel>`
+* :doc:`Dipole moment<tuto/dipole_moment>`
 
 .. toctree::
   :hidden:
   
   tuto/visu_properties
   tuto/orbitals
+  tuto/cdft
   tuto/kernel
+  tuto/dipole_moment
   
 Writing Methods
 ---------------

@@ -277,8 +277,11 @@
 <li class="toctree-l2"><a class="reference internal" href="extract_adf/extract_fukui.html">rgmol.extract_adf.extract_fukui</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="extract_excited_states.html">Extract Excited States</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="extract_molden.html">Extract Excited States</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="extract_excited_states/extract_molden.html">extract_molden.extract</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="extract_orca.html">Extract Orca</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="extract_excited_states/extract_transition_orca.html">extract_orca.extract_transition</a></li>
 </ul>
 </details></li>
@@ -298,7 +301,9 @@
 <li class="toctree-l2"><a class="reference internal" href="plot/plot_product_MO.html">molecule.plot_product_MO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot/plot_transition_density.html">molecule.plot_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot/plot_diagonalized_condensed_kernel.html">molecule.plot_diagonalized_condensed_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_fukui_function.html">molecule.plot_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot/plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_dipole_moment.html">molecule.plot_dipole_moment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
@@ -306,7 +311,6 @@
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_MO.html">group_molecules.plot_MO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_transition_density.html">group_molecules.plot_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_diagonalized_condensed_kernel.html">group_molecules.plot_diagonalized_condensed_kernel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_diagonalized_kernel.html">group_molecules.plot_diagonalized_kernel</a></li>
 </ul>
 </details></li>
 </ul>
@@ -321,12 +325,13 @@
 <li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_AO.html">molecule.calculate_AO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_MO.html">molecule.calculate_MO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_electron_density.html">molecule.calculate_electron_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orbitals/diagonalize_kernel.html">molecule.diagonalize_kernel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_linear_response_partial.html">molecule.calculate_linear_response_function_partial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_linear_response_total.html">molecule.calculate_linear_response_function_total</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdft/calculate_hardness.html">molecule.calculate_hardness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdft/calculate_fukui_function.html">molecule.calculate_fukui_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdft/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdft/calculate_softness_kernel_eigenmodes.html">molecule.calculate_softness_kernel_eigenmodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/create_voxel_from_molecule.html">molecular_calculations.create_voxel_from_molecule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/create_coordinates_from_voxel.html">molecular_calculations.create_coordinates_from_voxel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_s.html">molecular_calculations.gaussian_s</a></li>
@@ -416,6 +421,9 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="orbitals/calculate_MO_chosen.html"><span class="doc">calculate_MO_chosen</span></a></p></td>
 <td><p>calculate one molecular orbitals</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="orbitals/calculate_electron_density.html"><span class="doc">calculate_electron_density</span></a></p></td>
+<td><p>calculate the electron density</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -424,7 +432,7 @@
 </section>
 <section id="td-dft-calculations">
 <h2>TD-DFT Calculations<a class="headerlink" href="#td-dft-calculations" title="Link to this heading">#</a></h2>
-<p>For TD-DFT calculations, the inputs needs to be an excited states calculation. More information can be found <a class="reference internal" href="extract_excited_states.html"><span class="doc">here</span></a>.</p>
+<p>For TD-DFT calculations, the inputs needs to be an excited states calculation. More information can be found <a class="reference internal" href="extract_orca.html"><span class="doc">here</span></a>.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="orbitals/calculate_transition_density.html"><span class="doc">calculate_transition_density</span></a></p></td>
@@ -443,17 +451,17 @@
 <h2>CDFT Descriptors<a class="headerlink" href="#cdft-descriptors" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="orbitals/calculate_eigenmodes_linear_response_function.html"><span class="doc">calculate_eigenmodes_linear_response_function</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="cdft/calculate_hardness.html"><span class="doc">calculate_hardness</span></a></p></td>
+<td><p>calculate the global hardness of the molecule</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cdft/calculate_fukui_function.html"><span class="doc">calculate_fukui_function</span></a></p></td>
+<td><p>calculate the fukui function of the molecule</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cdft/calculate_eigenmodes_linear_response_function.html"><span class="doc">calculate_eigenmodes_linear_response_function</span></a></p></td>
 <td><p>calculate only the eigenmodes of the linear response function</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="orbitals/diagonalize_kernel.html"><span class="doc">diagonalize_kernel</span></a></p></td>
-<td><p>calculate and diagonalize a kernel</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="orbitals/calculate_linear_response_partial.html"><span class="doc">calculate_linear_response_function_partial</span></a></p></td>
-<td><p>calculate the non condensed linear response function using the partial method</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="orbitals/calculate_linear_response_total.html"><span class="doc">calculate_linear_response_function_total</span></a></p></td>
-<td><p>calculate the non condensed linear response function on the total space</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="cdft/calculate_softness_kernel_eigenmodes.html"><span class="doc">calculate_softness_kernel_eigenmodes</span></a></p></td>
+<td><p>calculate only the eigenmodes of the softness kernel</p></td>
 </tr>
 </tbody>
 </table>

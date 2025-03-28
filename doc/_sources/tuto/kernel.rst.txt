@@ -22,10 +22,7 @@ If one wants to use Orca for the TD-DFT calculation, triplets states should not 
 The eigenmodes are sorted by eigenvalues. They can be selected using a slider. A script contaning all the examples can be found :doc:`here<example_script>`.
 
 
-Because the kernels are 6-dimensional, they scale up drastically in terms of memory used.
-If one only wants to compute the eigenmodes of the Linear Response function, a method that computes only the eigenmodes without calculating the kernel as a whole as been implemented and is the default.
-
-Otherwise, a partial method has been implemented which allows to remove the part of the space where the transition densities are almost zero. For each transition density, the space is sorted and the lower dense part that makes up to less than 1% is removed. In practice this removes as much as 90% of the space. As most of the eigenfunctions have a 0 eigenvalue, only a handfull of eigenmodes are calculated using the `scipy.sparse.linalg.eigsh <https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html>`_ function.
+Only the eigenmodes are computed using this method.
 
 
 The following code is an example of the diagonalization of the linear response function kernel ::
@@ -37,3 +34,27 @@ The following code is an example of the diagonalization of the linear response f
   mol = rgmol.extract_molden.extract(file,do_find_bonds=1)
   rgmol.extract_orca.extract_transition(rgmol.examples.orca_H2CO,mol=mol)
   mol.plot_diagonalized_kernel(kernel="linear_response_function",grid_points=(100,100,100),delta=10)
+
+
+Softness Kernel
+---------------
+
+Using the Parr-Berkowitz relation, one can compute the softness kernel from the linear response, the fukui functions and the hardness of the molecule.
+
+:math:`s(r,r') = -\chi(r,r') + \frac{f(r)f(r')}{\eta}`
+
+One needs to look at the computation of the linear response function, and the :doc:`fukui function<cdft>` in order to know which arguments and calculations has to be made.
+
+The following code is an example of the diagonalization of the softness kernel ::
+
+  import rgmol
+  import rgmol.examples
+
+  file = rgmol.examples.molden_H2CO
+  mol = rgmol.extract_molden.extract(file,do_find_bonds=1)
+  rgmol.extract_orca.extract_transition(rgmol.examples.orca_H2CO,mol=mol)
+  
+  file_m = rgmol.examples.molden_H2CO_m
+  mol_m = rgmol.extract_molden.extract(file,do_find_bonds=1)
+  
+  mol.plot_diagonalized_kernel(kernel="softness_kernel",mol_m=mol_m,fukui_type="f-",grid_points=(100,100,100),delta=10)

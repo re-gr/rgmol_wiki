@@ -1,0 +1,7 @@
+molecule.calculate_electron_density
+===================================
+
+.. automethod:: molecular_calculations::molecule.calculate_electron_density
+
+	
+   

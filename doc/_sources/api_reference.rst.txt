@@ -21,7 +21,8 @@ Extraction Functions from Outputs
 	:maxdepth: 3
 	
 	extract_adf
-	extract_excited_states
+	extract_molden
+	extract_orca
 	extract_cube
 	
 Representation Methods

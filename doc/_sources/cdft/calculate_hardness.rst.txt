@@ -1,0 +1,7 @@
+molecule.calculate_hardness
+===========================
+
+.. automethod:: molecular_calculations::molecule.calculate_hardness
+
+	
+   
