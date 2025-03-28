@@ -1,0 +1,19 @@
+ADF Output Examples
+-------------------
+
+First, the examples must be imported using ::
+
+  import rgmol.examples
+  
+The examples are :
+
+ * Chloromethane, PBE0 TZP, Full CDFT ::
+     
+	 file = rgmol.examples.adf_CH3Cl
+
+ * Methane, PBE0 TZP, Full CDFT ::
+ 
+     file = rgmol.examples.adf_CH4
+	 
+ 
+  

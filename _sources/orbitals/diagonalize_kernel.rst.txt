@@ -1,0 +1,7 @@
+molecule.diagonalize_kernel
+===========================
+
+.. automethod:: molecular_calculations::molecule.diagonalize_kernel
+
+	
+   
