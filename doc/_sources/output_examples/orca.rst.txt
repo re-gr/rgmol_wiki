@@ -11,14 +11,18 @@ The examples are :
      
 	 file = rgmol.examples.orca_CH3Cl
 
- * Formaldehyde, B3LYP def2-tzvp, TD-DFT TDA ::
+ * Formaldehyde, PBE0 aug-cc-pvtz, TD-DFT TDA ::
  
      file = rgmol.examples.orca_H2CO
-	 
+ 	 
  * Formaldehyde, M06 aug-cc-pvqz, TD-DFT TDA ::
  
      file = rgmol.examples.orca_H2CO_qz
-
+ 
+ * Formaldehyde+, PBE0 aug-cc-pvtz ::
+ 
+     file = rgmol.examples.orca_H2CO_m
+ 
  * Bromochlorofluoromethane, PBE0 def2-SVP, TD-DFT TDA DOSOC TRIPLETS, Rel DKH ::
  
      file = rgmol.examples.orca_CHFClBr
