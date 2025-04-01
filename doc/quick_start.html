@@ -263,7 +263,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tuto/orbitals.html">Orbitals Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuto/cdft.html">CDFT Descriptors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuto/kernel.html">Diagonalization of Kernels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tuto/dipole_moment.html">CDFT Descriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuto/dipole_moment.html">Dipole Moments</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tuto/write.html">Write</a></li>
@@ -507,7 +507,7 @@ They are built using a list of molecules.</p>
 <span class="n">list_molecules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
 
 <span class="n">file2</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
-<span class="n">mol2</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">mol2</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file2</span><span class="p">)</span>
 <span class="n">list_molecules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mol2</span><span class="p">)</span>
 
 <span class="n">group_mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">group_molecules</span><span class="p">(</span><span class="n">list_molecules</span><span class="p">)</span>

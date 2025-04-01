@@ -1,5 +1,5 @@
-CDFT Descriptors
-================
+Dipole Moments
+==============
 
 Electric and magnetic dipole moment can be extracted and visualize using rgmol.
 These moments can be extracted from an Orca TDDFT calculation output.
