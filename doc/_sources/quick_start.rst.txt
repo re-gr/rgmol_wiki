@@ -9,7 +9,7 @@ In order to use rgmol, one needs to import it using::
 
   import rgmol
   
-q
+
 Atom Objects
 ------------
 
@@ -46,6 +46,7 @@ Molecules Objects
 -----------------
 
 Molecules, such as atoms are objects introduced by rgmol. They contain the following attributes ::
+
  * atoms (the list of the atoms in the molecule)
  * bonds (the list of the bonds between the atoms)
  * properties (a dict containing various properties of the molecule such as Molecular Orbitals arrays
@@ -86,22 +87,35 @@ The supported DFT calculation outputs are :
  
     molecule = rgmol.extract_adf.extract(file)
  
- * Orca (only the extraction of excited states transition is implemented for now) ::
+ * Orca ::
  
-     molecule = rgmol.extract_orca.extract_transition(file)
- 
- * Cube files ::
- 
-     molecule = rgmol.extract_cube.extract(file)
+     molecule = rgmol.extract_orca.extract(file)
    
  * Molden Files ::
  
      molecule = rgmol.extract_molden.extract(file)
+
+* Cube files ::
  
-Soon to be implemented outputs :
- * XYZ Files
- * Gaussian
- 
+     molecule = rgmol.extract_cube.extract(file)
+
+Adding data from Calculation Outputs to a Molecule
+--------------------------------------------------
+
+It is also possible to add data from calculation to a molecule using the following functions ::
+
+  * Isodensity from a cube file ::
+  
+    rgmol.extract_cube.extract_properties(file,mol=molecule)
+
+  * Atomic Orbitals and Molecular Orbitals ::
+    
+	rgmol.extract_molden.extract_properties(file,mol=molecule)
+	
+  * Transition densities and dipole moments ::
+  
+    rgmol.extract_orac.extract_properties(file,mol=molecule)
+
  
 Plotting Molecules
 ------------------
@@ -128,7 +142,7 @@ Plotting Multiple Molecules
 ---------------------------
 
 One can plot multiple molecules using the group molecules object.
-They are built using a list of molecules ::
+They are built using a list of molecules.
 
 .. pyvista-plot::
    

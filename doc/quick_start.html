@@ -345,9 +345,9 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rgmol</span>
 </pre></div>
 </div>
-<p>q
-Atom Objects
-————</p>
+</section>
+<section id="atom-objects">
+<h2>Atom Objects<a class="headerlink" href="#atom-objects" title="Link to this heading">#</a></h2>
 <dl class="simple">
 <dt>In rgmol, the atoms are objects that contain multiple attributes such as :</dt><dd><ul class="simple">
 <li><p>atomic_number</p></li>
@@ -382,14 +382,12 @@ Atom Objects
 </section>
 <section id="molecules-objects">
 <h2>Molecules Objects<a class="headerlink" href="#molecules-objects" title="Link to this heading">#</a></h2>
-<dl class="simple">
-<dt>Molecules, such as atoms are objects introduced by rgmol. They contain the following attributes ::</dt><dd><ul class="simple">
-<li><p>atoms (the list of the atoms in the molecule)</p></li>
-<li><p>bonds (the list of the bonds between the atoms)</p></li>
-<li><p>properties (a dict containing various properties of the molecule such as Molecular Orbitals arrays</p></li>
-</ul>
-</dd>
-</dl>
+<p>Molecules, such as atoms are objects introduced by rgmol. They contain the following attributes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">atoms</span> <span class="p">(</span><span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">atoms</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">molecule</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">bonds</span> <span class="p">(</span><span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bonds</span> <span class="n">between</span> <span class="n">the</span> <span class="n">atoms</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">properties</span> <span class="p">(</span><span class="n">a</span> <span class="nb">dict</span> <span class="n">containing</span> <span class="n">various</span> <span class="n">properties</span> <span class="n">of</span> <span class="n">the</span> <span class="n">molecule</span> <span class="n">such</span> <span class="k">as</span> <span class="n">Molecular</span> <span class="n">Orbitals</span> <span class="n">arrays</span>
+</pre></div>
+</div>
 <p>The bonds list contains lists of 3 integers : [position in the list of atom 1, position in the list of atom 2, order of the bond]</p>
 <p>The following code presents how to create and view the attributes of a dihydrogen molecule</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">rgmol</span>
@@ -425,13 +423,8 @@ One just needs to use the following command</p>
 </pre></div>
 </div>
 </li>
-<li><p>Orca (only the extraction of excited states transition is implemented for now)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molecule</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_transition</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-<li><p>Cube files</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molecule</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_cube</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<li><p>Orca</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molecule</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -442,12 +435,31 @@ One just needs to use the following command</p>
 </li>
 </ul>
 </dd>
-<dt>Soon to be implemented outputs :</dt><dd><ul class="simple">
-<li><p>XYZ Files</p></li>
-<li><p>Gaussian</p></li>
-</ul>
-</dd>
 </dl>
+<ul>
+<li><p>Cube files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molecule</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_cube</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="adding-data-from-calculation-outputs-to-a-molecule">
+<h2>Adding data from Calculation Outputs to a Molecule<a class="headerlink" href="#adding-data-from-calculation-outputs-to-a-molecule" title="Link to this heading">#</a></h2>
+<p>It is also possible to add data from calculation to a molecule using the following functions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Isodensity</span> <span class="kn">from</span><span class="w"> </span><span class="nn">a</span> <span class="n">cube</span> <span class="n">file</span> <span class="p">::</span>
+
+  <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_cube</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">molecule</span><span class="p">)</span>
+
+<span class="o">*</span> <span class="n">Atomic</span> <span class="n">Orbitals</span> <span class="ow">and</span> <span class="n">Molecular</span> <span class="n">Orbitals</span> <span class="p">::</span>
+
+      <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">molecule</span><span class="p">)</span>
+
+<span class="o">*</span> <span class="n">Transition</span> <span class="n">densities</span> <span class="ow">and</span> <span class="n">dipole</span> <span class="n">moments</span> <span class="p">::</span>
+
+  <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orac</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">molecule</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="plotting-molecules">
 <h2>Plotting Molecules<a class="headerlink" href="#plotting-molecules" title="Link to this heading">#</a></h2>
@@ -484,23 +496,39 @@ Interactive Scene</label><div class="sd-tab-content docutils">
 <section id="plotting-multiple-molecules">
 <h2>Plotting Multiple Molecules<a class="headerlink" href="#plotting-multiple-molecules" title="Link to this heading">#</a></h2>
 <p>One can plot multiple molecules using the group molecules object.
-They are built using a list of molecules</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">pyvista</span><span class="o">-</span><span class="n">plot</span><span class="p">::</span>
+They are built using a list of molecules.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rgmol</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rgmol.examples</span>
+
+<span class="n">list_molecules</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH4</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">list_molecules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+
+<span class="n">file2</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
+<span class="n">mol2</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">list_molecules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mol2</span><span class="p">)</span>
+
+<span class="n">group_mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">group_molecules</span><span class="p">(</span><span class="n">list_molecules</span><span class="p">)</span>
+<span class="n">group_mol</span><span class="o">.</span><span class="n">plot_radius</span><span class="p">()</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>import rgmol
-import rgmol.examples</p>
-<p>list_molecules = []</p>
-<p>file = rgmol.examples.adf_CH4
-mol = rgmol.extract_adf.extract(file)
-list_molecules.append(mol)</p>
-<p>file2 = rgmol.examples.adf_CH3Cl
-mol2 = rgmol.extract_adf.extract(file)
-list_molecules.append(mol2)</p>
-<p>group_mol = rgmol.group_molecules(list_molecules)
-group_mol.plot_radius()</p>
-</div></blockquote>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Static Scene</label><div class="sd-tab-content docutils">
+<figure class="align-default">
+<img alt="_images/quick_start-2_00_00.png" src="_images/quick_start-2_00_00.png" />
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Interactive Scene</label><div class="sd-tab-content docutils">
+
+    <iframe src='_static/static_viewer.html?fileURL=../_images/build/plot_directive/quick_start-2_00_00.vtksz' width='100%%' height='400px' frameborder='0'></iframe>
+</div>
+</div>
 </section>
 </section>
 

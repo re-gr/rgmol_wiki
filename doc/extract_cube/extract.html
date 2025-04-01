@@ -52,7 +52,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'extract_cube/extract';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Plotting Methods" href="../plot.html" />
+    <link rel="next" title="extract_cube.extract_properties" href="extract_properties.html" />
     <link rel="prev" title="Extraction from Cube files" href="../extract_cube.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -277,15 +277,18 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../extract_molden.html">Extract Excited States</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../extract_excited_states/extract_molden.html">extract_molden.extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extract_molden/extract.html">extract_molden.extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extract_molden/extract_properties.html">extract_molden.extract_properties</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../extract_orca.html">Extract Orca</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../extract_excited_states/extract_transition_orca.html">extract_orca.extract_transition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extract_orca/extract.html">extract_orca.extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extract_orca/extract_properties.html">extract_orca.extract_properties</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../extract_cube.html">Extraction from Cube files</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">extract_cube.extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_properties.html">extract_cube.extract_properties</a></li>
 </ul>
 </details></li>
 </ul>
@@ -407,18 +410,18 @@
 <h1>extract_cube.extract<a class="headerlink" href="#extract-cube-extract" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="extract_cube.extract">
-<span class="sig-prename descclassname"><span class="pre">extract_cube.</span></span><span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_find_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extract_cube.extract" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">extract_cube.</span></span><span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_order_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extract_cube.extract" title="Link to this definition">#</a></dt>
 <dd><p>Extracts a molecule from a cube file.
-As the bonds are not defined in a cube file, one can use do_find_bonds to use an algorithm that tries to find bonds. It is still in WIP.</p>
+As the bonds are not defined in a cube file, one can use do_order_bonds to use an algorithm that tries to find bonds. It is still in WIP.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file</strong> (<em>str</em>)</p></li>
-<li><p><strong>do_find_bonds</strong> (<em>bool</em><em>, </em><em>optional</em>) – if one wants to use an algorithm to find the bonds (WIP)</p></li>
+<li><p><strong>do_order_bonds</strong> (<em>bool</em><em>, </em><em>optional</em>) – if one wants to use an algorithm to find the order of the bonds</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>mol</strong> (<em>molecule</em>) – the molecule extracted form the cube file with the voxel_origin, voxel_matrix and cube as properties</p>
+<dd class="field-even"><p><strong>mol</strong> (<em>molecule</em>) – the molecule extracted from the cube file with the voxel_origin, voxel_matrix and cube as properties</p>
 </dd>
 </dl>
 </dd></dl>
@@ -445,11 +448,11 @@ As the bonds are not defined in a cube file, one can use do_find_bonds to use an
       </div>
     </a>
     <a class="right-next"
-       href="../plot.html"
+       href="extract_properties.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Plotting Methods</p>
+        <p class="prev-next-title">extract_cube.extract_properties</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
