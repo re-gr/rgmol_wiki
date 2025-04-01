@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>rgmol &#8212; rgmol 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modules';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rgmol 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api_reference.html">
+    rgmol API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="plot_pyvista.html">
+    plot_pyvista module
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api_reference.html">
+    rgmol API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="plot_pyvista.html">
+    plot_pyvista module
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rgmol</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="rgmol">
+<h1>rgmol<a class="headerlink" href="#rgmol" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blank.html">blank module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculate_mo.html">calculate_mo module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.calculate_AO"><code class="docutils literal notranslate"><span class="pre">calculate_AO()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.calculate_MO"><code class="docutils literal notranslate"><span class="pre">calculate_MO()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.calculate_MO_chosen"><code class="docutils literal notranslate"><span class="pre">calculate_MO_chosen()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.calculate_chosen_transition_density"><code class="docutils literal notranslate"><span class="pre">calculate_chosen_transition_density()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.calculate_linear_response_function"><code class="docutils literal notranslate"><span class="pre">calculate_linear_response_function()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.calculate_linear_response_function_partial"><code class="docutils literal notranslate"><span class="pre">calculate_linear_response_function_partial()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.calculate_transition_density"><code class="docutils literal notranslate"><span class="pre">calculate_transition_density()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.create_coordinates_from_voxel"><code class="docutils literal notranslate"><span class="pre">create_coordinates_from_voxel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.create_voxel_from_molecule"><code class="docutils literal notranslate"><span class="pre">create_voxel_from_molecule()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.diagonalize_kernel"><code class="docutils literal notranslate"><span class="pre">diagonalize_kernel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.gaussian_d"><code class="docutils literal notranslate"><span class="pre">gaussian_d()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.gaussian_f"><code class="docutils literal notranslate"><span class="pre">gaussian_f()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.gaussian_g"><code class="docutils literal notranslate"><span class="pre">gaussian_g()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.gaussian_p"><code class="docutils literal notranslate"><span class="pre">gaussian_p()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_mo.html#calculate_mo.gaussian_s"><code class="docutils literal notranslate"><span class="pre">gaussian_s()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="calculate_orbitals.html">calculate_orbitals module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.calculate_AO"><code class="docutils literal notranslate"><span class="pre">calculate_AO()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.calculate_MO"><code class="docutils literal notranslate"><span class="pre">calculate_MO()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.calculate_MO_chosen"><code class="docutils literal notranslate"><span class="pre">calculate_MO_chosen()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.calculate_chosen_transition_density"><code class="docutils literal notranslate"><span class="pre">calculate_chosen_transition_density()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.calculate_linear_response_function"><code class="docutils literal notranslate"><span class="pre">calculate_linear_response_function()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.calculate_linear_response_function_partial"><code class="docutils literal notranslate"><span class="pre">calculate_linear_response_function_partial()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.calculate_transition_density"><code class="docutils literal notranslate"><span class="pre">calculate_transition_density()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.create_coordinates_from_voxel"><code class="docutils literal notranslate"><span class="pre">create_coordinates_from_voxel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.create_voxel_from_molecule"><code class="docutils literal notranslate"><span class="pre">create_voxel_from_molecule()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.diagonalize_kernel"><code class="docutils literal notranslate"><span class="pre">diagonalize_kernel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.gaussian_d"><code class="docutils literal notranslate"><span class="pre">gaussian_d()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.gaussian_f"><code class="docutils literal notranslate"><span class="pre">gaussian_f()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.gaussian_g"><code class="docutils literal notranslate"><span class="pre">gaussian_g()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.gaussian_p"><code class="docutils literal notranslate"><span class="pre">gaussian_p()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#calculate_orbitals.gaussian_s"><code class="docutils literal notranslate"><span class="pre">gaussian_s()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dicts.html">dicts module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_script.html">example_script module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extract_adf.html">extract_adf module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf.html#extract_adf.extract"><code class="docutils literal notranslate"><span class="pre">extract()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf.html#extract_adf.extract_bonds"><code class="docutils literal notranslate"><span class="pre">extract_bonds()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf.html#extract_adf.extract_condensed_kernel"><code class="docutils literal notranslate"><span class="pre">extract_condensed_kernel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf.html#extract_adf.extract_fukui"><code class="docutils literal notranslate"><span class="pre">extract_fukui()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf.html#extract_adf.extract_global_descriptors"><code class="docutils literal notranslate"><span class="pre">extract_global_descriptors()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_adf.html#extract_adf.extract_pos"><code class="docutils literal notranslate"><span class="pre">extract_pos()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extract_cube.html">extract_cube module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extract_cube.html#extract_cube.extract"><code class="docutils literal notranslate"><span class="pre">extract()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_cube.html#extract_cube.extract_cube"><code class="docutils literal notranslate"><span class="pre">extract_cube()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extract_excited_states.html">extract_excited_states module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extract_excited_states.html#extract_excited_states.extract_molden"><code class="docutils literal notranslate"><span class="pre">extract_molden()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="extract_excited_states.html#extract_excited_states.extract_transition_orca"><code class="docutils literal notranslate"><span class="pre">extract_transition_orca()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="general_function.html">general_function module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general_function.html#general_function.are_bonded"><code class="docutils literal notranslate"><span class="pre">are_bonded()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="general_function.html#general_function.find_atom_near"><code class="docutils literal notranslate"><span class="pre">find_atom_near()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="general_function.html#general_function.find_bonds"><code class="docutils literal notranslate"><span class="pre">find_bonds()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="general_function.html#general_function.is_phenyl"><code class="docutils literal notranslate"><span class="pre">is_phenyl()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mult_extrac_adf.html">mult_extrac_adf module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="objects.html">objects module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="objects.html#objects.atom"><code class="docutils literal notranslate"><span class="pre">atom</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.atom.plot"><code class="docutils literal notranslate"><span class="pre">atom.plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.atom.plot_vector"><code class="docutils literal notranslate"><span class="pre">atom.plot_vector()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="objects.html#objects.group_molecules"><code class="docutils literal notranslate"><span class="pre">group_molecules</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.group_molecules.plot_diagonalized_kernel_plt"><code class="docutils literal notranslate"><span class="pre">group_molecules.plot_diagonalized_kernel_plt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.group_molecules.plot_kernel_plt"><code class="docutils literal notranslate"><span class="pre">group_molecules.plot_kernel_plt()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="objects.html#objects.molecule"><code class="docutils literal notranslate"><span class="pre">molecule</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.calculate_AO"><code class="docutils literal notranslate"><span class="pre">molecule.calculate_AO()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.calculate_MO"><code class="docutils literal notranslate"><span class="pre">molecule.calculate_MO()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.calculate_MO_chosen"><code class="docutils literal notranslate"><span class="pre">molecule.calculate_MO_chosen()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.calculate_chosen_transition_density"><code class="docutils literal notranslate"><span class="pre">molecule.calculate_chosen_transition_density()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.calculate_linear_response_function"><code class="docutils literal notranslate"><span class="pre">molecule.calculate_linear_response_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.calculate_linear_response_function_partial"><code class="docutils literal notranslate"><span class="pre">molecule.calculate_linear_response_function_partial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.calculate_transition_density"><code class="docutils literal notranslate"><span class="pre">molecule.calculate_transition_density()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.diagonalize_kernel"><code class="docutils literal notranslate"><span class="pre">molecule.diagonalize_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.list_properties"><code class="docutils literal notranslate"><span class="pre">molecule.list_properties()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.list_property"><code class="docutils literal notranslate"><span class="pre">molecule.list_property()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot"><code class="docutils literal notranslate"><span class="pre">molecule.plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot_AO"><code class="docutils literal notranslate"><span class="pre">molecule.plot_AO()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot_MO"><code class="docutils literal notranslate"><span class="pre">molecule.plot_MO()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot_diagonalized_kernel"><code class="docutils literal notranslate"><span class="pre">molecule.plot_diagonalized_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot_isodensity"><code class="docutils literal notranslate"><span class="pre">molecule.plot_isodensity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot_property"><code class="docutils literal notranslate"><span class="pre">molecule.plot_property()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot_radius"><code class="docutils literal notranslate"><span class="pre">molecule.plot_radius()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot_transition_density"><code class="docutils literal notranslate"><span class="pre">molecule.plot_transition_density()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="objects.html#objects.molecule.plot_vector"><code class="docutils literal notranslate"><span class="pre">molecule.plot_vector()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plot_matplotlib.html">plot_matplotlib module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.Rx"><code class="docutils literal notranslate"><span class="pre">Rx()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.Ry"><code class="docutils literal notranslate"><span class="pre">Ry()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.Rz"><code class="docutils literal notranslate"><span class="pre">Rz()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.axes_equal"><code class="docutils literal notranslate"><span class="pre">axes_equal()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.bonds_plotting"><code class="docutils literal notranslate"><span class="pre">bonds_plotting()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.corr_angle"><code class="docutils literal notranslate"><span class="pre">corr_angle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.find_angle"><code class="docutils literal notranslate"><span class="pre">find_angle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.orthonormal_basis"><code class="docutils literal notranslate"><span class="pre">orthonormal_basis()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.plot"><code class="docutils literal notranslate"><span class="pre">plot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.plot_atom"><code class="docutils literal notranslate"><span class="pre">plot_atom()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.plot_diagonalized_condensed_kernel"><code class="docutils literal notranslate"><span class="pre">plot_diagonalized_condensed_kernel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.plot_radius"><code class="docutils literal notranslate"><span class="pre">plot_radius()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.plot_vector"><code class="docutils literal notranslate"><span class="pre">plot_vector()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.plot_vector_atom"><code class="docutils literal notranslate"><span class="pre">plot_vector_atom()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.rota_bonds"><code class="docutils literal notranslate"><span class="pre">rota_bonds()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.rota_mol"><code class="docutils literal notranslate"><span class="pre">rota_mol()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_matplotlib.html#plot_matplotlib.transf_pos"><code class="docutils literal notranslate"><span class="pre">transf_pos()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plot_plotly.html">plot_plotly module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot_pyvista.html">plot_pyvista module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot"><code class="docutils literal notranslate"><span class="pre">plot()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_AO"><code class="docutils literal notranslate"><span class="pre">plot_AO()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_MO"><code class="docutils literal notranslate"><span class="pre">plot_MO()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_diagonalized_condensed_kernel"><code class="docutils literal notranslate"><span class="pre">plot_diagonalized_condensed_kernel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_diagonalized_kernel"><code class="docutils literal notranslate"><span class="pre">plot_diagonalized_kernel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_isodensity"><code class="docutils literal notranslate"><span class="pre">plot_isodensity()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_property"><code class="docutils literal notranslate"><span class="pre">plot_property()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_radius"><code class="docutils literal notranslate"><span class="pre">plot_radius()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_transition_density"><code class="docutils literal notranslate"><span class="pre">plot_transition_density()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_pyvista.html#plot_pyvista.plot_vector"><code class="docutils literal notranslate"><span class="pre">plot_vector()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plot_sphere.html">plot_sphere module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rgmol.html">rgmol module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rgmol.html#rgmol.create_newS"><code class="docutils literal notranslate"><span class="pre">create_newS()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="write.html">write module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="write.html#write.output_comp"><code class="docutils literal notranslate"><span class="pre">output_comp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="write.html#write.write_analogy"><code class="docutils literal notranslate"><span class="pre">write_analogy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="write.html#write.write_fukui"><code class="docutils literal notranslate"><span class="pre">write_fukui()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="write.html#write.write_lrls"><code class="docutils literal notranslate"><span class="pre">write_lrls()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="write.html#write.write_m"><code class="docutils literal notranslate"><span class="pre">write_m()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/modules.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, re-gr.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

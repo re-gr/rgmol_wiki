@@ -1,0 +1,7 @@
+blank module
+============
+
+.. automodule:: blank
+   :members:
+   :undoc-members:
+   :show-inheritance:

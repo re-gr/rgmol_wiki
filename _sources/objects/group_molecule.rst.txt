@@ -1,0 +1,4 @@
+rgmol.group_molecules
+=====================
+
+.. autoclass:: objects::group_molecules

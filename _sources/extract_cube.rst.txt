@@ -1,0 +1,17 @@
+Extraction from Cube files
+==========================
+
+
+.. list-table::
+	
+    * - :doc:`extract_cube.extract<extract_cube/extract>`
+      - creates a molecule from a cube file 
+    * - :doc:`extract_cube.extract_properties<extract_cube/extract_properties>`
+      - extracts the isodentity from a cube file and adds it to a molecule
+
+.. toctree::
+	:hidden:
+	
+	extract_cube/extract
+	extract_cube/extract_properties
+

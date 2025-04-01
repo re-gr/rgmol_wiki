@@ -1,0 +1,24 @@
+List of Output Examples
+=======================
+
+Some output examples are distributed with the package.
+They can be imported using ::
+  
+  import rgmol.examples
+  file = rgmol.examples.adf_chloromethane
+
+In the following, a list of the output examples can be found :
+
+* :doc:`ADF Output Examples<output_examples/adf>`
+* :doc:`Orca Output Examples<output_examples/orca>`
+* :doc:`Molden Files Examples<output_examples/molden>`
+* :doc:`Cube Files Examples<output_examples/cube>`
+
+.. toctree::
+  :hidden:
+  
+  output_examples/adf
+  output_examples/orca
+  output_examples/molden
+  output_examples/cube
+   
