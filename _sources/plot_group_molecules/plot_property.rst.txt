@@ -1,0 +1,7 @@
+group_molecules.plot_property
+=============================
+
+.. automethod:: plot_pyvista::group_molecules.plot_property
+
+	
+   

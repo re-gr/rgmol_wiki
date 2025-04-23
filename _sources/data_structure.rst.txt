@@ -1,0 +1,33 @@
+Data Structure
+==============
+
+Example on how you should structure your files
+**********************************************
+
+Your data should be structured in order to use rgmol without any issues ::
+
+    project
+    ├── molecule_1
+    |   ├── rgmol
+    |   ├── molecule_1.out
+    |   └── molecule_1.molden.input
+    |   ├── molecule_1_m.out
+    |   └── molecule_1_m.molden.input
+    ├── molecule_2
+    |   ├── rgmol
+    |   ├── molecule_2.out
+    |   └── molecule_2.molden.input
+    └── script.py
+    
+The molecule_1_m is the molecule 1 with an electron removed.
+
+The rgmol folder
+****************
+
+The rgmol folders will be created and used automatically by rgmol after the calculation of kernel eigenmodes.
+
+This folder will contain the eigenmodes with the extension .npy as well as the voxel parameters, the eigenvalues and the contribution of the transition densities.
+
+More information on the way they are written can be found :doc:`here<tuto/write>`.
+
+

@@ -1,0 +1,7 @@
+molecule.plot_vector
+====================
+
+.. automethod:: plot_pyvista::molecule.plot_vector
+
+	
+   

@@ -1,0 +1,7 @@
+molecule.calculate_eigenmodes_linear_response_function
+======================================================
+
+.. automethod:: molecular_calculations::molecule.calculate_eigenmodes_linear_response_function
+
+	
+   

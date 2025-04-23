@@ -1,0 +1,7 @@
+molecule.calculate_MO
+=====================
+
+.. automethod:: molecular_calculations::molecule.calculate_MO
+
+	
+   

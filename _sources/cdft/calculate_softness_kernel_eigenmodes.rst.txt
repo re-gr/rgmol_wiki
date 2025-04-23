@@ -1,0 +1,7 @@
+molecule.calculate_softness_kernel_eigenmodes
+=============================================
+
+.. automethod:: molecular_calculations::molecule.calculate_softness_kernel_eigenmodes
+
+	
+   

@@ -1,0 +1,8 @@
+molecule.plot_dipole_moment
+===========================
+
+
+.. automethod:: plot_pyvista::molecule.plot_dipole_moment
+
+	
+   

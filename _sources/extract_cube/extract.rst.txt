@@ -1,0 +1,5 @@
+extract_cube.extract
+====================
+
+.. autofunction:: extract_cube.extract
+

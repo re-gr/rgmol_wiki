@@ -1,0 +1,7 @@
+calculate\_mo module
+====================
+
+.. automodule:: calculate_mo
+   :members:
+   :undoc-members:
+   :show-inheritance:
