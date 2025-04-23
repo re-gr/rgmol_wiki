@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Write &#8212; rgmol 0.1 documentation</title>
+    <title>Writing and Reading &#8212; rgmol 0.1 documentation</title>
   
   
   
@@ -52,7 +52,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tuto/write';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="List of Output Examples" href="../examples.html" />
+    <link rel="next" title="Multithreading" href="multithreading.html" />
     <link rel="prev" title="Dipole Moments" href="dipole_moment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -257,6 +257,7 @@
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_structure.html">Data Structure</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="visu_properties.html">Visualization of Properties</a></li>
@@ -266,7 +267,10 @@
 <li class="toctree-l1"><a class="reference internal" href="dipole_moment.html">Dipole Moments</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Write</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Writing and Reading</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="multithreading.html">Multithreading</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../examples.html">List of Output Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -320,7 +324,7 @@
     
     <li class="breadcrumb-item"><a href="../tutorials.html" class="nav-link">Tutorials</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Write</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Writing and Reading</span></li>
   </ul>
 </nav>
 </div>
@@ -337,13 +341,21 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="write">
-<h1>Write<a class="headerlink" href="#write" title="Link to this heading">#</a></h1>
-<p>This part shows how to write files with rgmol.
-For now only cube files can be written.</p>
+  <section id="writing-and-reading">
+<h1>Writing and Reading<a class="headerlink" href="#writing-and-reading" title="Link to this heading">#</a></h1>
+<p>This part shows how to write and read files with rgmol.</p>
+<section id="writing-and-reading-eigenmodes">
+<h2>Writing and reading eigenmodes<a class="headerlink" href="#writing-and-reading-eigenmodes" title="Link to this heading">#</a></h2>
+<p>After the computation of the eigenmodes of a kernel, the eigenmodes will be saved by default.</p>
+<p>The molecule.plot_diagonalized_kernel will also look if the eigenmodes have already been calculated.</p>
+<p>In order to recompute the eigenmodes, one can use the try_reading keyword. And if one do not want to save the eigenmodes, one can use the save keyword.</p>
+<p>More information on the keywords can be found <a class="reference internal" href="../plot/plot_diagonalized_kernel.html"><span class="doc">here</span></a>.</p>
+<p>They will be saved in the rgmol folder see <a class="reference internal" href="../data_structure.html"><span class="doc">here</span></a> for more information.</p>
+</section>
 <section id="writing-cube-files">
 <h2>Writing cube files<a class="headerlink" href="#writing-cube-files" title="Link to this heading">#</a></h2>
 <p>One can use the method <a class="reference internal" href="../write/write_cube.html"><span class="doc">molecule.write_cube</span></a> to write a cube file containing a certain vector.</p>
+<p>This file can then be reextracted using the <a class="reference internal" href="../extract_cube/extract.html"><span class="doc">rgmol.extract_cube.extract</span></a> or <a class="reference internal" href="../extract_cube/extract_properties.html"><span class="doc">rgmol.extract_cube.extract</span></a> functions.</p>
 </section>
 </section>
 
@@ -367,11 +379,11 @@ For now only cube files can be written.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../examples.html"
+       href="multithreading.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">List of Output Examples</p>
+        <p class="prev-next-title">Multithreading</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

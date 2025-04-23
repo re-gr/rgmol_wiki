@@ -46,6 +46,15 @@ The writing methods are listed here
   
   write
 
+Multithreading Function
+-----------------------
+
+The rgmol.set_nprocs function is listed here
+
+.. toctree::
+  :maxdepth: 3
+  
+  set_nprocs
 	
 Computation Methods
 -------------------

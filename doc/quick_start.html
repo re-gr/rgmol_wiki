@@ -52,7 +52,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'quick_start';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Visualization of Properties" href="tuto/visu_properties.html" />
+    <link rel="next" title="Data Structure" href="data_structure.html" />
     <link rel="prev" title="Installation" href="installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -257,6 +257,7 @@
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tuto/visu_properties.html">Visualization of Properties</a></li>
@@ -266,7 +267,10 @@
 <li class="toctree-l1"><a class="reference internal" href="tuto/dipole_moment.html">Dipole Moments</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tuto/write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuto/write.html">Writing and Reading</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tuto/multithreading.html">Multithreading</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="examples.html">List of Output Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -428,21 +432,19 @@ One just needs to use the following command</p>
 </pre></div>
 </div>
 </li>
-<li><p>Molden Files</p>
+<li><p>Molden files</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molecule</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
-</ul>
-</dd>
-</dl>
-<ul>
 <li><p>Cube files</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">molecule</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_cube</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 </ul>
+</dd>
+</dl>
 </section>
 <section id="adding-data-from-calculation-outputs-to-a-molecule">
 <h2>Adding data from Calculation Outputs to a Molecule<a class="headerlink" href="#adding-data-from-calculation-outputs-to-a-molecule" title="Link to this heading">#</a></h2>
@@ -552,11 +554,11 @@ Interactive Scene</label><div class="sd-tab-content docutils">
       </div>
     </a>
     <a class="right-next"
-       href="tuto/visu_properties.html"
+       href="data_structure.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Visualization of Properties</p>
+        <p class="prev-next-title">Data Structure</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

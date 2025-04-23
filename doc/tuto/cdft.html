@@ -258,6 +258,7 @@
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_structure.html">Data Structure</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="visu_properties.html">Visualization of Properties</a></li>
@@ -267,7 +268,10 @@
 <li class="toctree-l1"><a class="reference internal" href="dipole_moment.html">Dipole Moments</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="write.html">Writing and Reading</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="multithreading.html">Multithreading</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../examples.html">List of Output Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -349,8 +353,8 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">rgmol.examples</span>
 
 <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
-<span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_find_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">mol</span><span class="o">.</span><span class="n">calculate_harndess</span><span class="p">()</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mol</span><span class="o">.</span><span class="n">calculate_hardness</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -366,11 +370,11 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">rgmol.examples</span>
 
 <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
-<span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_find_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_transition</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
 
 <span class="n">file_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO_m</span>
-<span class="n">mol_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file_m</span><span class="p">,</span><span class="n">do_find_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mol_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file_m</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">mol</span><span class="o">.</span><span class="n">plot_fukui_function</span><span class="p">(</span><span class="n">mol_m</span><span class="o">=</span><span class="n">mol_m</span><span class="p">,</span><span class="n">fukui_type</span><span class="o">=</span><span class="s2">&quot;f-&quot;</span><span class="p">,</span><span class="n">grid_points</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span><span class="n">delta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>

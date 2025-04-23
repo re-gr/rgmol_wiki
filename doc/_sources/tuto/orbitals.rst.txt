@@ -26,7 +26,7 @@ The following example is the plotting of the 59th (starting at 0) MO of formalde
    import rgmol.examples
         
    file = rgmol.examples.cube_H2CO_MO59
-   mol = rgmol.extract_cube.extract(file,do_find_bonds=1)
+   mol = rgmol.extract_cube.extract(file,do_order_bonds=1)
    mol.plot_isodensity()
 
 
@@ -53,7 +53,7 @@ This method will create a space around the molecule. The parameters of the space
    import rgmol.examples
         
    file = rgmol.examples.molden_H2CO
-   mol = rgmol.extract_molden.extract(file,do_find_bonds=1)
+   mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
    mol.plot_AO(delta=5,grid_points=(80,80,80))
 
 Molecular Orbitals
@@ -79,7 +79,7 @@ This method will create a space around the molecule. The parameters of the space
    import rgmol.examples
         
    file = rgmol.examples.molden_H2CO
-   mol = rgmol.extract_molden.extract(file,do_find_bonds=1)
+   mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
    mol.plot_MO(delta=8,grid_points=(80,80,80))
 
 
@@ -106,8 +106,8 @@ They are sorted by energy. They can be selected using a slider which cannot be a
    import rgmol.examples
         
    file = rgmol.examples.molden_CH3Cl
-   mol = rgmol.extract_molden.extract(file,do_find_bonds=1)
-   rgmol.extract_orca.extract_transition(rgmol.examples.orca_CH3Cl,mol=mol)
+   mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
+   rgmol.extract_orca.extract_properties(rgmol.examples.orca_CH3Cl,mol=mol)
    mol.plot_transition_density(delta=5,grid_points=(80,80,80),opacity_radius=.4)
 
 

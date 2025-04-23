@@ -8,6 +8,7 @@ Getting Started
 
 * :doc:`Installation<installation>`
 * :doc:`Quick Start<quick_start>`
+* :doc:`Data Structure<data_structure>`
 
 
 .. toctree::
@@ -15,6 +16,7 @@ Getting Started
   
   installation
   quick_start
+  data_structure
    
 Plotting Methods
 ----------------
@@ -34,16 +36,26 @@ Plotting Methods
   tuto/kernel
   tuto/dipole_moment
   
-Writing Methods
----------------
+Writing and Reading
+-------------------
 
-* :doc:`Writing Files<tuto/write>`
+* :doc:`Writing and Reading Files<tuto/write>`
 
 .. toctree::
   :hidden:
   
   tuto/write
 
+Multithreading
+--------------
+
+* :doc:`Multithreading<tuto/multithreading>`
+
+.. toctree::
+  :hidden:
+  
+  tuto/multithreading
+  
 
 Additional Informations
 -----------------------

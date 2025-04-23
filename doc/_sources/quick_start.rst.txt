@@ -91,11 +91,11 @@ The supported DFT calculation outputs are :
  
      molecule = rgmol.extract_orca.extract(file)
    
- * Molden Files ::
+ * Molden files ::
  
      molecule = rgmol.extract_molden.extract(file)
 
-* Cube files ::
+ * Cube files ::
  
      molecule = rgmol.extract_cube.extract(file)
 
@@ -116,7 +116,7 @@ It is also possible to add data from calculation to a molecule using the followi
   
     rgmol.extract_orac.extract_properties(file,mol=molecule)
 
- 
+
 Plotting Molecules
 ------------------
 
