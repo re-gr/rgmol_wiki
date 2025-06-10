@@ -1,0 +1,27 @@
+molden Output Examples
+----------------------
+
+First, the examples must be imported using ::
+
+  import rgmol.examples
+  
+The examples are :
+
+ * Chloromethane, B3LYP cc-pvtz, TD-DFT TDA ::
+     
+	 file = rgmol.examples.molden_CH3Cl
+
+ * Formaldehyde, B3LYP def2-tzvp, TD-DFT TDA ::
+ 
+     file = rgmol.examples.molden_H2CO
+	 
+ * Formaldehyde, M06 aug-cc-pvqz, TD-DFT TDA ::
+ 
+     file = rgmol.examples.molden_H2CO_qz
+
+ * Bromochlorofluoromethane, PBE0 def2-SVP, TD-DFT TDA DOSOC TRIPLETS, Rel DKH ::
+ 
+     file = rgmol.examples.molden_CHFClBr
+	 
+ 
+  

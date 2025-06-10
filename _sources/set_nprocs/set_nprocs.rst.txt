@@ -1,0 +1,8 @@
+rgmol.set_nprocs
+================
+
+
+.. automethod:: rgmol::rgmol.set_nprocs
+
+	
+   

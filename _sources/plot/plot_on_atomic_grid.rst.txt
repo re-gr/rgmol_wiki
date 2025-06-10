@@ -1,0 +1,7 @@
+molecule.plot_on_atomic_grid
+============================
+
+.. automethod:: plot_pyvista::molecule.plot_on_atomic_grid
+
+	
+   

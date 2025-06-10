@@ -1,0 +1,7 @@
+test\_rgmol module
+==================
+
+.. automodule:: test_rgmol
+   :members:
+   :undoc-members:
+   :show-inheritance:

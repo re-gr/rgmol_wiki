@@ -1,0 +1,18 @@
+Multithreading
+==============
+
+rgmol supports partially multithreading.
+
+The multithreading is used for the calculations of transition densities and the diagonalization of kernels.
+
+They speed up a lot the calculations as long as the number of processors is not too high.
+
+The recommended amount would be between 4 and 8.
+
+
+rgmol.set_nprocs
+****************
+
+The maximum number of processors can be set using ::
+
+  rgmol.set_nprocs(5)

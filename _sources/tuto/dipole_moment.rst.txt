@@ -1,0 +1,17 @@
+Dipole Moments
+==============
+
+Electric and magnetic dipole moment can be extracted and visualize using rgmol.
+These moments can be extracted from an Orca TDDFT calculation output.
+
+The following code extracts and plots the moments ::
+
+  import rgmol
+  import rgmol.examples
+  
+  file = rgmol.examples.molden_CHFClBr
+  mol = rgmol.extract_molden.extract(file,do_find_bonds=1)
+  rgmol.extract_orca.extract_transition(rgmol.examples.orca_CHFClBr,mol=mol)
+  
+  mol.plot_dipole_moment(factor=5)
+  

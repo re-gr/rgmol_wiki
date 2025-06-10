@@ -1,0 +1,25 @@
+Writing and Reading
+-------------------
+
+This part shows how to write and read files with rgmol.
+
+
+Writing and reading eigenmodes
+******************************
+
+After the computation of the eigenmodes of a kernel, the eigenmodes will be saved by default.
+
+The molecule.plot_diagonalized_kernel will also look if the eigenmodes have already been calculated.
+
+In order to recompute the eigenmodes, one can use the try_reading keyword. And if one do not want to save the eigenmodes, one can use the save keyword.
+
+More information on the keywords can be found :doc:`here<../plot/plot_diagonalized_kernel>`.
+
+They will be saved in the rgmol folder see :doc:`here<../data_structure>` for more information.
+
+Writing cube files
+******************
+
+One can use the method :doc:`molecule.write_cube<../write/write_cube>` to write a cube file containing a certain vector.
+
+This file can then be reextracted using the :doc:`rgmol.extract_cube.extract<../extract_cube/extract>` or :doc:`rgmol.extract_cube.extract<../extract_cube/extract_properties>` functions.

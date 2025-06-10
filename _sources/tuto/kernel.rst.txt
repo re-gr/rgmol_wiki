@@ -1,0 +1,60 @@
+Diagonalization of Kernels
+==========================
+
+The non condensed kernel can be computed and their eigenmodes analyzed.
+
+For now, only the linear response function kernel has been implemented.
+
+Linear Response Function Kernel
+-------------------------------
+
+The linear response function kernel can be computed as :
+
+:math:`\chi(r,r') = -2\sum_{k\neq0} \frac{\rho_0^k(r) \rho_0^k(r')}{E_k-E_0}`
+
+With :math:`\rho_0^k` the transition density, and :math:`E_k` the energy of the transition k.
+
+
+Therefore, the linear response function kernel can be computed using the MO calculated from molden file combined with the extraction of the coefficients from a TD-DFT calculation.
+
+If one wants to use Orca for the TD-DFT calculation, triplets states should not be included and the keyword TPRINT 0.00001 will allow more transitions to be printed.
+
+The eigenmodes are sorted by eigenvalues. They can be selected using a slider. A script contaning all the examples can be found :doc:`here<example_script>`.
+
+
+Only the eigenmodes are computed using this method.
+
+
+The following code is an example of the diagonalization of the linear response function kernel ::
+
+  import rgmol
+  import rgmol.examples
+
+  file = rgmol.examples.molden_H2CO
+  mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
+  rgmol.extract_orca.extract_transition(rgmol.examples.orca_H2CO,mol=mol)
+  mol.plot_diagonalized_kernel(kernel="linear_response_function")
+
+
+Softness Kernel
+---------------
+
+Using the Parr-Berkowitz relation, one can compute the softness kernel from the linear response, the fukui functions and the hardness of the molecule.
+
+:math:`s(r,r') = -\chi(r,r') + \frac{f(r)f(r')}{\eta}`
+
+One needs to look at the computation of the linear response function, and the :doc:`fukui function<cdft>` in order to know which arguments and calculations has to be made.
+
+The following code is an example of the diagonalization of the softness kernel ::
+
+  import rgmol
+  import rgmol.examples
+
+  file = rgmol.examples.molden_H2CO
+  mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
+  rgmol.extract_orca.extract_transition(rgmol.examples.orca_H2CO,mol=mol)
+  
+  file_m = rgmol.examples.molden_H2CO_m
+  mol_m = rgmol.extract_molden.extract(file,do_order_bonds=1)
+  
+  mol.plot_diagonalized_kernel(kernel="softness_kernel",mol_m=mol_m,fukui_type="f-")

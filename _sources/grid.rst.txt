@@ -1,0 +1,87 @@
+Grid Functions
+==============
+
+Grid Objects
+------------
+
+.. list-table::
+	
+    * - :doc:`mol_grids<grid/mol_grids>`
+      - grids of a molecule, containing all the atomic grids
+    * - :doc:`grid<grid/grid>`
+      - atomic grid around an atom
+	  
+.. toctree::
+	:hidden:
+	
+	grid/mol_grids
+	grid/grid
+	  
+mol_grids Methods
+-----------------
+
+.. list-table::
+	
+    * - :doc:`mol_grids.integrate<grid/mol_grids_integrate>`
+      - integrate on the grid
+    * - :doc:`mol_grids.integrate<grid/mol_grids_integrate_product>`
+      - integrate a product on the grid
+	  
+.. toctree::
+	:hidden:
+	
+	grid/mol_grids_integrate
+	grid/mol_grids_integrate_product
+	
+	  
+grid Methods
+------------
+
+.. list-table::
+	
+    * - :doc:`grid.integrate<grid/grid_integrate>`
+      - integrate on the grid
+    * - :doc:`grid.integrate<grid/grid_integrate_product>`
+      - integrate a product on the grid
+	  
+.. toctree::
+	:hidden:
+	
+	grid/grid_integrate
+	grid/grid_integrate_product
+	
+Calculation Grids Functions
+---------------------------
+
+.. list-table::
+	
+    * - :doc:`create_atomic_grid<grid/create_atomic_grid>`
+      - create an atomic grid around a center
+    * - :doc:`create_grid_from_mol<grid/create_grid_from_mol>`
+      - create a mol_grids object from a molecule
+    * - :doc:`voronoi_becke<grid/voronoi_becke>`
+      - determines the weight for each grid according to the becke scheme
+	  
+.. toctree::
+	:hidden:
+	
+	grid/create_atomic_grid
+	grid/create_grid_from_mol
+	grid/voronoi_becke
+
+	
+Representation Grids Functions
+------------------------------
+
+.. list-table::
+	
+    * - :doc:`create_cubic_grid_from_molecule<grid/create_cubic_grid_from_molecule>`
+      - create a cubic grid from a molecule
+    * - :doc:`create_coordinates_from_cubic_grid<grid/create_coordinates_from_cubic_grid>`
+      - create x,y,z coordinates from a cubic grid
+	  
+.. toctree::
+	:hidden:
+	
+	grid/create_cubic_grid_from_molecule
+	grid/create_coordinates_from_cubic_grid

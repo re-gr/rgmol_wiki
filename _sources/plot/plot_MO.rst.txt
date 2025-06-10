@@ -1,0 +1,8 @@
+molecule.plot_MO
+================
+
+
+.. automethod:: plot_pyvista::molecule.plot_MO
+
+	
+   

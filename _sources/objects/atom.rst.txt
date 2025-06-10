@@ -1,0 +1,6 @@
+rgmol.atom
+==================
+
+.. autoclass:: objects.atom
+	:class-doc-from: init
+	

@@ -1,0 +1,7 @@
+molecule.calculate_chosen_transition_density
+============================================
+
+.. automethod:: molecular_calculations::molecule.calculate_chosen_transition_density
+
+	
+   

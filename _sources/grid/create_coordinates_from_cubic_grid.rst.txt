@@ -1,0 +1,5 @@
+grid.create_coordinates_from_cubic_grid
+=======================================
+
+.. autofunction:: grid::create_coordinates_from_cubic_grid
+

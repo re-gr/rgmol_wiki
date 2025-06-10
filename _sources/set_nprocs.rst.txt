@@ -1,0 +1,12 @@
+Set Number of Processors
+========================
+
+.. list-table::
+	
+    * - :doc:`rgmol.set_nprocs<set_nprocs/set_nprocs>`
+      - Sets the maximum number of processors that will be used
+
+.. toctree::
+    :hidden:
+  
+    set_nprocs/set_nprocs

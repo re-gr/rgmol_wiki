@@ -1,0 +1,7 @@
+molecule.plot_diagonalized_condensed_kernel
+===========================================
+
+.. automethod:: plot_pyvista::molecule.plot_diagonalized_condensed_kernel
+
+	
+   

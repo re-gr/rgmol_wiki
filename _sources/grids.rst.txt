@@ -1,0 +1,51 @@
+Grids
+=====
+
+Type of grids
+-------------
+
+Two type of grids are used throughout rgmol :
+ - the calculation grid
+ - the representation grid
+
+The grids will be automatically created using the plotting and calculation methods using optimized parameters.
+But if one wants to change the parameters, the following part will explain how to.
+
+Calculation Grids
+-----------------
+	
+Calculation grids or atomic grids are the grids used for computation of new properties.
+Typically they are used for the computation of the eigenmodes of kernels.
+
+The calculations grids are multi-center grids around each atom. The Becke scheme [1]_ is used to integrate properly each grid.
+The radial formula used is Treutler and Ahlrichs' M4 formula [2]_
+The angular part is using the Lebedev quadrature [3]_
+
+All the parameters were optimized for each atom by integrating each atomic orbital without normalization, and getting results with an accuracy of at least 1e-9
+
+This grid can be visualized using the :doc:`plot_atomic_grid<plot/plot_atomic_grid>` method.
+And any vector can be visualized on this grid using the :doc:`plot_on_atomic_grid<plot/plot_on_atomic_grid>` method.
+
+On can also use its own parameters using :doc:`create_grid_from_mol<grid/create_grid_from_mol>` and :doc:`create_atomic_grid<grid/create_atomic_grid>`.
+
+Integration
+***********
+
+In order to integrate on atomic grids, one can get the atomic grids using :doc:`molecule.mol_grids<objects>`
+Then the methods that can be used are 
+
+
+Representation Grid
+-------------------
+
+The representation grid is a simple cubic grid that is defined around the molecule.
+This grid is used to represent the vectors and is not used for calculation, only visualization.
+
+One can use the grid_points and delta parameters of all the plotting methods to shape this grid as intended.
+
+References
+----------
+
+     .. [1] Becke, A. D.The Journal of Chemical Physics, 1988,88, 2547–2553.
+     .. [2] Treutler, O.; Ahlrichs, R.The Journal of Chemical Physics, 1995,102,346–354.
+     .. [3] Lebedev, V. I.; Laikov, D. N. InDoklady Mathematics, 1999; Vol. 59,pp 477–481.

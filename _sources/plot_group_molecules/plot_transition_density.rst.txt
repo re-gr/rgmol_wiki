@@ -1,0 +1,7 @@
+group_molecules.plot_transition_density
+=======================================
+
+.. automethod:: plot_pyvista::group_molecules.plot_transition_density
+
+	
+   

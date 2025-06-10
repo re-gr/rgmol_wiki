@@ -1,0 +1,7 @@
+molecule.diagonalize_kernel
+===========================
+
+.. automethod:: calculate_CDFT::molecule.diagonalize_kernel
+
+	
+   

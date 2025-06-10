@@ -1,0 +1,7 @@
+grid.integrate
+==============
+
+.. automethod:: grid::grid.integrate
+
+	
+   

@@ -1,0 +1,7 @@
+plot\_plotly module
+===================
+
+.. automodule:: plot_plotly
+   :members:
+   :undoc-members:
+   :show-inheritance:

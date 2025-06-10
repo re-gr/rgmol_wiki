@@ -1,0 +1,24 @@
+Extract Orca
+======================
+
+This function extracts transition densities and dipole moment from an orca calculation output.
+
+
+
+.. list-table::
+
+    * - :doc:`extract_orca.extract<extract_orca/extract>`
+      - extract a molecule from an orca output
+    * - :doc:`extract_orca.extract_properties<extract_orca/extract_properties>`
+      - extracts all the TDDFT information from an orca output file and adds it to a molecule
+
+
+
+.. toctree::
+	:hidden:
+	
+	extract_orca/extract
+	extract_orca/extract_properties
+
+	
+   
