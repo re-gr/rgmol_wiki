@@ -1,0 +1,5 @@
+grid.create_atomic_grid
+=======================
+
+.. autofunction:: grid.create_atomic_grid
+

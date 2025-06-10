@@ -37,15 +37,12 @@ For TD-DFT calculations, the inputs needs to be an excited states calculation. M
 	
     * - :doc:`calculate_transition_density<orbitals/calculate_transition_density>`
       - calculate all the transition densities
-    * - :doc:`calculate_chosen_transition_density<orbitals/calculate_chosen_transition_density>`
-      - calculate a chosen transition density
 
 
 .. toctree::
 	:hidden:
 	
 	orbitals/calculate_transition_density
-	orbitals/calculate_chosen_transition_density
 
 
 CDFT Descriptors
@@ -72,28 +69,6 @@ CDFT Descriptors
 	cdft/calculate_fukui_function
 	cdft/calculate_eigenmodes_linear_response_function
 	cdft/calculate_softness_kernel_eigenmodes
-
-
-
-Voxel Manipulation
-------------------
-
-
-.. list-table::
-	
-    * - :doc:`create_voxel_from_molecule<orbitals/create_voxel_from_molecule>`
-      - create a voxel around a molecule
-    * - :doc:`create_coordinates_from_voxel<orbitals/create_coordinates_from_voxel>`
-      - create space array from voxel
-
-
-
-.. toctree::
-	:hidden:
-	
-	orbitals/create_voxel_from_molecule   
-	orbitals/create_coordinates_from_voxel   
- 
 
 	
 

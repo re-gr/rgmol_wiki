@@ -8,4 +8,4 @@ rgmol.extract_orca.extract_properties(rgmol.examples.orca_H2CO,mol=mol)
 file_m = rgmol.examples.molden_H2CO_m
 mol_m = rgmol.extract_molden.extract(file_m,do_order_bonds=1)
 
-mol.plot_fukui_function(mol_m=mol_m,fukui_type="f-",grid_points=(100,100,100),delta=10)
+mol.plot_fukui_function(mol_m=mol_m,fukui_type="f-")

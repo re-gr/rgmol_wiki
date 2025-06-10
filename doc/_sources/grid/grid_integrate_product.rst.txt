@@ -1,0 +1,7 @@
+grid.integrate_product
+======================
+
+.. automethod:: grid::grid.integrate_product
+
+	
+   

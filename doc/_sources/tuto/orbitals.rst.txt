@@ -54,7 +54,7 @@ This method will create a space around the molecule. The parameters of the space
         
    file = rgmol.examples.molden_H2CO
    mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
-   mol.plot_AO(delta=5,grid_points=(80,80,80))
+   mol.plot_AO()
 
 Molecular Orbitals
 ******************
@@ -80,7 +80,7 @@ This method will create a space around the molecule. The parameters of the space
         
    file = rgmol.examples.molden_H2CO
    mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
-   mol.plot_MO(delta=8,grid_points=(80,80,80))
+   mol.plot_MO()
 
 
 
@@ -108,6 +108,6 @@ They are sorted by energy. They can be selected using a slider which cannot be a
    file = rgmol.examples.molden_CH3Cl
    mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
    rgmol.extract_orca.extract_properties(rgmol.examples.orca_CH3Cl,mol=mol)
-   mol.plot_transition_density(delta=5,grid_points=(80,80,80),opacity_radius=.4)
+   mol.plot_transition_density()
 
 

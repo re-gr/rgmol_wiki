@@ -1,0 +1,7 @@
+mol_grids.integrate
+===================
+
+.. automethod:: grid::mol_grids.integrate
+
+	
+   

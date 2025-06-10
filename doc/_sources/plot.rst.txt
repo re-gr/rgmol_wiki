@@ -82,9 +82,30 @@ Other Molecule Methods
     
     plot/plot_dipole_moment
 
+
+
+Atomic Grids Methods
+--------------------
+
+.. list-table::
+
+    * - :doc:`molecule.plot_atomic_grid<plot/plot_atomic_grid>`
+      - plot the atomic grid
+    * - :doc:`molecule.plot_on_atomic_grid<plot/plot_on_atomic_grid>`
+      - plot a vector on the atomic grid
+
+.. toctree::
+    :hidden:
+    
+    plot/plot_atomic_grid
+    plot/plot_on_atomic_grid
+
+
+
 Group Molecules Methods
 ***********************
    
+**Group molecules are deprecated for now and may or may not be reimplemented in the future...**
 
 General Group Molecule Methods
 ------------------------------

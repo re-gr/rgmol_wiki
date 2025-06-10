@@ -50,6 +50,9 @@ Molecules, such as atoms are objects introduced by rgmol. They contain the follo
  * atoms (the list of the atoms in the molecule)
  * bonds (the list of the bonds between the atoms)
  * properties (a dict containing various properties of the molecule such as Molecular Orbitals arrays
+ * name (the name of the molecule)
+ * file (the file used to extract the molecule)
+ * mol_grids (the atomic grids used)
 
 The bonds list contains lists of 3 integers : [position in the list of atom 1, position in the list of atom 2, order of the bond]
  
@@ -140,6 +143,8 @@ The following commands is a detailed script that show a Chloromethane molecule f
 
 Plotting Multiple Molecules
 ---------------------------
+
+**Group molecules are deprecated for now and may or may not be reimplemented in the future...**
 
 One can plot multiple molecules using the group molecules object.
 They are built using a list of molecules.

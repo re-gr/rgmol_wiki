@@ -306,6 +306,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_fukui_function.html">molecule.plot_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_dipole_moment.html">molecule.plot_dipole_moment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_atomic_grid.html">molecule.plot_atomic_grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_on_atomic_grid.html">molecule.plot_on_atomic_grid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
@@ -335,13 +337,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_electron_density.html">molecule.calculate_electron_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_hardness.html">molecule.calculate_hardness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_fukui_function.html">molecule.calculate_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_softness_kernel_eigenmodes.html">molecule.calculate_softness_kernel_eigenmodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/create_voxel_from_molecule.html">molecular_calculations.create_voxel_from_molecule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/create_coordinates_from_voxel.html">molecular_calculations.create_coordinates_from_voxel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/orbital_s.html">molecular_calculations.gaussian_s</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/orbital_p.html">molecular_calculations.gaussian_p</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/orbital_d.html">molecular_calculations.gaussian_d</a></li>
@@ -416,7 +415,7 @@
 <h1>rgmol.molecule<a class="headerlink" href="#rgmol-molecule" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="objects.molecule">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">objects.</span></span><span class="sig-name descname"><span class="pre">molecule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bonds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#objects.molecule" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">objects.</span></span><span class="sig-name descname"><span class="pre">molecule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bonds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mol_grids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#objects.molecule" title="Link to this definition">#</a></dt>
 <dd><p>Constructs a molecule from atoms.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -425,6 +424,8 @@
 <li><p><strong>bonds</strong> (<em>list</em>) – List of the bonds</p></li>
 <li><p><strong>properties</strong> (<em>dict</em>) – Dictionnary containing the properties of the molecules. By default : {}</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the molecule</p></li>
+<li><p><strong>file</strong> (<em>str</em><em>, </em><em>optional</em>) – the file from which the information are extracted</p></li>
+<li><p><strong>mol_grids</strong> (<a class="reference internal" href="../grid/mol_grids.html#grid.mol_grids" title="grid.mol_grids"><em>mol_grids</em></a><em>, </em><em>optional</em>) – The atomic grids of the molecule</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -432,10 +433,12 @@
 </dd>
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>)</p></li>
 <li><p><strong>atoms</strong> (<em>list</em>)</p></li>
 <li><p><strong>bonds</strong> (<em>list</em>)</p></li>
 <li><p><strong>properties</strong> (<em>dict</em>)</p></li>
+<li><p><strong>name</strong> (<em>str</em>)</p></li>
+<li><p><strong>file</strong> (<em>str</em>)</p></li>
+<li><p><strong>mol_grids</strong> (<em>mol_grids</em>)</p></li>
 </ul>
 </dd>
 </dl>

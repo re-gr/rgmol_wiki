@@ -1,0 +1,5 @@
+grid.create_cubic_grid_from_molecule
+====================================
+
+.. autofunction:: grid::create_cubic_grid_from_molecule
+

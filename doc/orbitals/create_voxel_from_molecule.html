@@ -306,6 +306,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_fukui_function.html">molecule.plot_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_dipole_moment.html">molecule.plot_dipole_moment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_atomic_grid.html">molecule.plot_atomic_grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_on_atomic_grid.html">molecule.plot_on_atomic_grid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
@@ -335,7 +337,6 @@
 <li class="toctree-l2"><a class="reference internal" href="calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_electron_density.html">molecule.calculate_electron_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_transition_density.html">molecule.calculate_transition_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_hardness.html">molecule.calculate_hardness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_fukui_function.html">molecule.calculate_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
@@ -414,27 +415,6 @@
                   
   <section id="molecular-calculations-create-voxel-from-molecule">
 <h1>molecular_calculations.create_voxel_from_molecule<a class="headerlink" href="#molecular-calculations-create-voxel-from-molecule" title="Link to this heading">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="molecular_calculations.create_voxel_from_molecule">
-<span class="sig-prename descclassname"><span class="pre">molecular_calculations.</span></span><span class="sig-name descname"><span class="pre">create_voxel_from_molecule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.create_voxel_from_molecule" title="Link to this definition">#</a></dt>
-<dd><p>Creates a voxel from the position of atoms in a molecule</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mol</strong> (<em>molecule_object</em>)</p></li>
-<li><p><strong>grid_points</strong> (<em>list</em><em> of </em><em>3</em>) – the number of points for each coordinates</p></li>
-<li><p><strong>delta</strong> (<em>float</em><em>, </em><em>optional</em>) – the length added on all directiosn to the box containing all atomic centers</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>voxel_origin</strong> (<em>list of 3</em>) – the origin of the voxel</p></li>
-<li><p><strong>voxel_matrix</strong> (<em>2d list</em>) – the matrix of the voxel</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 
 

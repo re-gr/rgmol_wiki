@@ -284,10 +284,13 @@
  | <a href="#C"><strong>C</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#G"><strong>G</strong></a>
+ | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
+ | <a href="#V"><strong>V</strong></a>
  | <a href="#W"><strong>W</strong></a>
  
 </div>
@@ -304,8 +307,6 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="orbitals/calculate_AO.html#molecular_calculations.molecule.calculate_AO">calculate_AO() (molecular_calculations.molecule method)</a>
 </li>
-      <li><a href="orbitals/calculate_chosen_transition_density.html#molecular_calculations.molecule.calculate_chosen_transition_density">calculate_chosen_transition_density() (molecular_calculations.molecule method)</a>
-</li>
       <li><a href="cdft/calculate_eigenmodes_linear_response_function.html#molecular_calculations.molecule.calculate_eigenmodes_linear_response_function">calculate_eigenmodes_linear_response_function() (molecular_calculations.molecule method)</a>
 </li>
       <li><a href="orbitals/calculate_electron_density.html#molecular_calculations.molecule.calculate_electron_density">calculate_electron_density() (molecular_calculations.molecule method)</a>
@@ -314,19 +315,23 @@
 </li>
       <li><a href="cdft/calculate_hardness.html#molecular_calculations.molecule.calculate_hardness">calculate_hardness() (molecular_calculations.molecule method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="orbitals/calculate_MO.html#molecular_calculations.molecule.calculate_MO">calculate_MO() (molecular_calculations.molecule method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="orbitals/calculate_MO_chosen.html#molecular_calculations.molecule.calculate_MO_chosen">calculate_MO_chosen() (molecular_calculations.molecule method)</a>
 </li>
       <li><a href="cdft/calculate_softness_kernel_eigenmodes.html#molecular_calculations.molecule.calculate_softness_kernel_eigenmodes">calculate_softness_kernel_eigenmodes() (molecular_calculations.molecule method)</a>
 </li>
       <li><a href="orbitals/calculate_transition_density.html#molecular_calculations.molecule.calculate_transition_density">calculate_transition_density() (molecular_calculations.molecule method)</a>
 </li>
-      <li><a href="orbitals/create_coordinates_from_voxel.html#molecular_calculations.create_coordinates_from_voxel">create_coordinates_from_voxel() (in module molecular_calculations)</a>
+      <li><a href="grid/create_atomic_grid.html#grid.create_atomic_grid">create_atomic_grid() (in module grid)</a>
 </li>
-      <li><a href="orbitals/create_voxel_from_molecule.html#molecular_calculations.create_voxel_from_molecule">create_voxel_from_molecule() (in module molecular_calculations)</a>
+      <li><a href="grid/create_coordinates_from_cubic_grid.html#grid.create_coordinates_from_cubic_grid">create_coordinates_from_cubic_grid() (in module grid)</a>
+</li>
+      <li><a href="grid/create_cubic_grid_from_molecule.html#grid.create_cubic_grid_from_molecule">create_cubic_grid_from_molecule() (in module grid)</a>
+</li>
+      <li><a href="grid/create_grid_from_mol.html#grid.create_grid_from_mol">create_grid_from_mol() (in module grid)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -382,8 +387,30 @@
 </li>
       <li><a href="orbitals/orbital_s.html#molecular_calculations.gaussian_s">gaussian_s() (in module molecular_calculations)</a>
 </li>
+      <li><a href="grid/grid.html#grid.grid">grid (class in grid)</a>
+</li>
       <li><a href="objects/group_molecule.html#objects.group_molecules">group_molecules (class in objects)</a>
 </li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="grid/grid_integrate.html#grid.grid.integrate">integrate() (grid.grid method)</a>
+
+      <ul>
+        <li><a href="grid/mol_grids_integrate.html#grid.mol_grids.integrate">(grid.mol_grids method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="grid/grid_integrate_product.html#grid.grid.integrate_product">integrate_product() (grid.grid method)</a>
+
+      <ul>
+        <li><a href="grid/mol_grids_integrate_product.html#grid.mol_grids.integrate_product">(grid.mol_grids method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -402,6 +429,10 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="grid/mol_grids.html#grid.mol_grids">mol_grids (class in grid)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="objects/molecule.html#objects.molecule">molecule (class in objects)</a>
 </li>
   </ul></td>
@@ -416,6 +447,8 @@
         <li><a href="plot/plot_AO.html#plot_pyvista.molecule.plot_AO">(plot_pyvista.molecule method)</a>
 </li>
       </ul></li>
+      <li><a href="plot/plot_atomic_grid.html#plot_pyvista.molecule.plot_atomic_grid">plot_atomic_grid() (plot_pyvista.molecule method)</a>
+</li>
       <li><a href="plot_group_molecules/plot_diagonalized_condensed_kernel.html#plot_pyvista.group_molecules.plot_diagonalized_condensed_kernel">plot_diagonalized_condensed_kernel() (plot_pyvista.group_molecules method)</a>
 
       <ul>
@@ -444,6 +477,8 @@
       </ul></li>
       <li><a href="plot/plot_multiple_isodensities.html#plot_pyvista.molecule.plot_multiple_isodensities">plot_multiple_isodensities() (plot_pyvista.molecule method)</a>
 </li>
+      <li><a href="plot/plot_on_atomic_grid.html#plot_pyvista.molecule.plot_on_atomic_grid">plot_on_atomic_grid() (plot_pyvista.molecule method)</a>
+</li>
       <li><a href="plot/plot_product_MO.html#plot_pyvista.molecule.plot_product_MO">plot_product_MO() (plot_pyvista.molecule method)</a>
 </li>
       <li><a href="plot_group_molecules/plot_property.html#plot_pyvista.group_molecules.plot_property">plot_property() (plot_pyvista.group_molecules method)</a>
@@ -467,10 +502,42 @@
   </ul></td>
 </tr></table>
 
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reconstruction/reconstruct_AO.html#rectilinear_grid_reconstruction.reconstruct_AO">reconstruct_AO() (in module rectilinear_grid_reconstruction)</a>
+</li>
+      <li><a href="reconstruction/reconstruct_chosen_MO.html#rectilinear_grid_reconstruction.reconstruct_chosen_MO">reconstruct_chosen_MO() (in module rectilinear_grid_reconstruction)</a>
+</li>
+      <li><a href="reconstruction/reconstruct_chosen_transition_density.html#rectilinear_grid_reconstruction.reconstruct_chosen_transition_density">reconstruct_chosen_transition_density() (in module rectilinear_grid_reconstruction)</a>
+</li>
+      <li><a href="reconstruction/reconstruct_eigenvectors.html#rectilinear_grid_reconstruction.reconstruct_eigenvectors">reconstruct_eigenvectors() (in module rectilinear_grid_reconstruction)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reconstruction/reconstruct_electron_density.html#rectilinear_grid_reconstruction.reconstruct_electron_density">reconstruct_electron_density() (in module rectilinear_grid_reconstruction)</a>
+</li>
+      <li><a href="reconstruction/reconstruct_fukui_function.html#rectilinear_grid_reconstruction.reconstruct_fukui_function">reconstruct_fukui_function() (in module rectilinear_grid_reconstruction)</a>
+</li>
+      <li><a href="reconstruction/reconstruct_MO.html#rectilinear_grid_reconstruction.reconstruct_MO">reconstruct_MO() (in module rectilinear_grid_reconstruction)</a>
+</li>
+      <li><a href="reconstruction/reconstruct_transition_density.html#rectilinear_grid_reconstruction.reconstruct_transition_density">reconstruct_transition_density() (in module rectilinear_grid_reconstruction)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="set_nprocs/set_nprocs.html#rgmol.rgmol.set_nprocs">set_nprocs() (rgmol.rgmol method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="grid/voronoi_becke.html#grid.voronoi_becke">voronoi_becke() (in module grid)</a>
 </li>
   </ul></td>
 </tr></table>

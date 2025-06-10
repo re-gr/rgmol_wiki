@@ -1,0 +1,5 @@
+grid.voronoi_becke
+==================
+
+.. autofunction:: grid.voronoi_becke
+

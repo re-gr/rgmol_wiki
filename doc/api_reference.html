@@ -307,6 +307,8 @@
 <li class="toctree-l2"><a class="reference internal" href="plot/plot_fukui_function.html">molecule.plot_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot/plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot/plot_dipole_moment.html">molecule.plot_dipole_moment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_atomic_grid.html">molecule.plot_atomic_grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot/plot_on_atomic_grid.html">molecule.plot_on_atomic_grid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
@@ -336,18 +338,44 @@
 <li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_electron_density.html">molecule.calculate_electron_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cdft/calculate_hardness.html">molecule.calculate_hardness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cdft/calculate_fukui_function.html">molecule.calculate_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cdft/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cdft/calculate_softness_kernel_eigenmodes.html">molecule.calculate_softness_kernel_eigenmodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orbitals/create_voxel_from_molecule.html">molecular_calculations.create_voxel_from_molecule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orbitals/create_coordinates_from_voxel.html">molecular_calculations.create_coordinates_from_voxel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_s.html">molecular_calculations.gaussian_s</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_p.html">molecular_calculations.gaussian_p</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_d.html">molecular_calculations.gaussian_d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_f.html">molecular_calculations.gaussian_f</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbitals/orbital_g.html">molecular_calculations.gaussian_g</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="grid.html">Grid Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="grid/mol_grids.html">rgmol.grid.mol_grids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/grid.html">rgmol.grid.grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/mol_grids_integrate.html">mol_grids.integrate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/mol_grids_integrate_product.html">mol_grids.integrate_product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/grid_integrate.html">grid.integrate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/grid_integrate_product.html">grid.integrate_product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/create_atomic_grid.html">grid.create_atomic_grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/create_grid_from_mol.html">grid.create_grid_from_mol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/voronoi_becke.html">grid.voronoi_becke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/create_cubic_grid_from_molecule.html">grid.create_cubic_grid_from_molecule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid/create_coordinates_from_cubic_grid.html">grid.create_coordinates_from_cubic_grid</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="reconstruction.html">Reconstruction Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="reconstruction/reconstruct_AO.html">rgmol.rectilinear_grid_reconstruction.reconstruct_AO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reconstruction/reconstruct_MO.html">rgmol.rectilinear_grid_reconstruction.reconstruct_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reconstruction/reconstruct_chosen_MO.html">rgmol.rectilinear_grid_reconstruction.reconstruct_chosen_MO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reconstruction/reconstruct_electron_density.html">rgmol.rectilinear_grid_reconstruction.reconstruct_electron_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reconstruction/reconstruct_fukui_function.html">rgmol.rectilinear_grid_reconstruction.reconstruct_fukui_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reconstruction/reconstruct_transition_density.html">rgmol.rectilinear_grid_reconstruction.reconstruct_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reconstruction/reconstruct_chosen_transition_density.html">rgmol.rectilinear_grid_reconstruction.reconstruct_chosen_transition_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reconstruction/reconstruct_eigenvectors.html">rgmol.rectilinear_grid_reconstruction.reconstruct_eigenvectors</a></li>
 </ul>
 </details></li>
 </ul>
@@ -450,6 +478,7 @@ Details on how to get started can be found <a class="reference internal" href="t
 <li class="toctree-l3"><a class="reference internal" href="plot.html#orbitals-molecule-methods">Orbitals Molecule Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot.html#cdft-molecule-methods">CDFT Molecule Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot.html#other-molecule-methods">Other Molecule Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html#atomic-grids-methods">Atomic Grids Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="plot.html#group-molecules-methods">Group Molecules Methods</a><ul>
@@ -493,10 +522,35 @@ Details on how to get started can be found <a class="reference internal" href="t
 <li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#orbital-calculations">Orbital Calculations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#td-dft-calculations">TD-DFT Calculations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#cdft-descriptors">CDFT Descriptors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#voxel-manipulation">Voxel Manipulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_orbitals.html#gaussian-atomic-orbitals">Gaussian Atomic Orbitals</a></li>
 </ul>
 </li>
+</ul>
+</div>
+</section>
+<section id="grid-functions">
+<h2>Grid Functions<a class="headerlink" href="#grid-functions" title="Link to this heading">#</a></h2>
+<p>The definition and computation of the grids are detailed here</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="grid.html">Grid Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grid.html#grid-objects">Grid Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid.html#mol-grids-methods">mol_grids Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid.html#grid-methods">grid Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid.html#calculation-grids-functions">Calculation Grids Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid.html#representation-grids-functions">Representation Grids Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="reconstruction-on-representation-grid-functions">
+<h2>Reconstruction on Representation Grid Functions<a class="headerlink" href="#reconstruction-on-representation-grid-functions" title="Link to this heading">#</a></h2>
+<p>The functions used to compute molecular properties on the representation grid.
+If one wants to visualize them, use the methods defined in the representation methods.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reconstruction.html">Reconstruction Functions</a></li>
 </ul>
 </div>
 </section>

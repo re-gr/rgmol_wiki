@@ -67,5 +67,24 @@ Some functions that are used such as gaussian atomic orbitals
 	calculate_orbitals
    
 
-	
-   
+Grid Functions
+--------------
+
+The definition and computation of the grids are detailed here
+
+.. toctree::
+    :maxdepth: 3
+
+    grid
+    
+Reconstruction on Representation Grid Functions
+-----------------------------------------------
+
+The functions used to compute molecular properties on the representation grid.
+If one wants to visualize them, use the methods defined in the representation methods.
+
+.. toctree::
+    :maxdepth: 3
+
+    reconstruction
+

@@ -257,6 +257,7 @@
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grids.html">Grids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data_structure.html">Data Structure</a></li>
 </ul>
 <ul class="nav bd-sidenav">
@@ -345,78 +346,93 @@
 <h1>Example Script<a class="headerlink" href="#example-script" title="Link to this heading">#</a></h1>
 <p>The following script can be found in the package.</p>
 <p>It contains each of the examples in the tutorials.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rgmol</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Notes</span>
+<span class="sd">-----</span>
+
+<span class="sd">This script contains the examples presented throughout the tutorial.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">rgmol</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">rgmol.examples</span>
 
 <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-        <span class="c1">##For each of these examples, just change False to True</span>
+  <span class="c1">##For each of these examples, just change False to True</span>
 
-        <span class="c1">## Visualization of chloromethane from an ADF output</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_radius</span><span class="p">()</span>
+  <span class="c1">## Visualization of chloromethane from an ADF output</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_radius</span><span class="p">()</span>
 
-        <span class="c1">## Visualization of a property : the dual</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_property</span><span class="p">(</span><span class="s2">&quot;dual&quot;</span><span class="p">,</span><span class="n">factor</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+  <span class="c1">## Visualization of a property : the dual</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_property</span><span class="p">(</span><span class="s2">&quot;dual&quot;</span><span class="p">,</span><span class="n">factor</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-        <span class="c1">## Visualization of a condensed kernel : condensed linear response</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_diagonalized_condensed_kernel</span><span class="p">(</span><span class="s2">&quot;condensed linear response&quot;</span><span class="p">)</span>
+  <span class="c1">## Visualization of a condensed kernel : condensed linear response</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_condensed_kernel</span><span class="p">(</span><span class="s2">&quot;condensed linear response&quot;</span><span class="p">,</span><span class="n">factor</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
 
-        <span class="c1">## Visualization of a cube file</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">cube_H2CO_MO59</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_cube</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_isodensity</span><span class="p">()</span>
+  <span class="c1">## Visualization of a diagonalized condensed kernel : condensed linear response</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">adf_CH3Cl</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_adf</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_diagonalized_condensed_kernel</span><span class="p">(</span><span class="s2">&quot;condensed linear response&quot;</span><span class="p">)</span>
 
-        <span class="c1">## Visualization of Atomic Orbitals</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_AO</span><span class="p">(</span><span class="n">delta</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">grid_points</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">))</span>
+  <span class="c1">## Visualization of a cube file</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">cube_H2CO_MO59</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_cube</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_isodensity</span><span class="p">()</span>
 
-        <span class="c1">## Visualization of Molecular Orbitals</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_MO</span><span class="p">(</span><span class="n">delta</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">grid_points</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">))</span>
+  <span class="c1">## Visualization of Atomic Orbitals</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_AO</span><span class="p">()</span>
 
-        <span class="c1">## Visualization of Transition Densities</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_transition_density</span><span class="p">(</span><span class="n">delta</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">grid_points</span><span class="o">=</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">60</span><span class="p">),</span><span class="n">opacity_radius</span><span class="o">=</span><span class="mf">.4</span><span class="p">)</span>
+  <span class="c1">## Visualization of Molecular Orbitals</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_MO</span><span class="p">()</span>
 
-        <span class="c1">## Visualization of Diagonalized Non-Condensed Kernel : Linear response function</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_diagonalized_kernel</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;linear_response_function&quot;</span><span class="p">,</span><span class="n">grid_points</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">),</span><span class="n">delta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+  <span class="c1">## Visualization of Transition Densities</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_transition_density</span><span class="p">()</span>
 
-        <span class="c1">## Visualization of Diagonalized Non-Condensed Kernel : Softness kernel</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
+  <span class="c1">## Visualization of Diagonalized Non-Condensed Kernel : Linear response function</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_diagonalized_kernel</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;linear_response_function&quot;</span><span class="p">)</span>
 
-                <span class="n">file_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO_m</span>
-                <span class="n">mol_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file_m</span><span class="p">)</span>
+  <span class="c1">## Visualization of Diagonalized Non-Condensed Kernel : Softness kernel</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract_properties</span><span class="p">(</span><span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_H2CO</span><span class="p">,</span><span class="n">mol</span><span class="o">=</span><span class="n">mol</span><span class="p">)</span>
 
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_diagonalized_kernel</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;softness_kernel&quot;</span><span class="p">,</span><span class="n">mol_m</span><span class="o">=</span><span class="n">mol_m</span><span class="p">,</span><span class="n">fukui_type</span><span class="o">=</span><span class="s2">&quot;f-&quot;</span><span class="p">,</span><span class="n">grid_points</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">),</span><span class="n">delta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">file_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">molden_H2CO_m</span>
+    <span class="n">mol_m</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_molden</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file_m</span><span class="p">)</span>
 
-        <span class="c1">## Visualization of Dipole moments</span>
-        <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
-                <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_CHFClBr</span>
-                <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                <span class="n">mol</span><span class="o">.</span><span class="n">plot_dipole_moment</span><span class="p">()</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_diagonalized_kernel</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;softness_kernel&quot;</span><span class="p">,</span><span class="n">mol_m</span><span class="o">=</span><span class="n">mol_m</span><span class="p">,</span><span class="n">fukui_type</span><span class="o">=</span><span class="s2">&quot;f-&quot;</span><span class="p">)</span>
+
+  <span class="c1">## Visualization of Dipole moments</span>
+  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">orca_CHFClBr</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">rgmol</span><span class="o">.</span><span class="n">extract_orca</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">do_order_bonds</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">mol</span><span class="o">.</span><span class="n">plot_dipole_moment</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>

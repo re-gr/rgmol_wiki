@@ -53,7 +53,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cdft/calculate_softness_kernel_eigenmodes';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="molecular_calculations.create_voxel_from_molecule" href="../orbitals/create_voxel_from_molecule.html" />
+    <link rel="next" title="molecular_calculations.gaussian_s" href="../orbitals/orbital_s.html" />
     <link rel="prev" title="molecule.calculate_eigenmodes_linear_response_function" href="calculate_eigenmodes_linear_response_function.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -307,6 +307,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_fukui_function.html">molecule.plot_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_dipole_moment.html">molecule.plot_dipole_moment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_atomic_grid.html">molecule.plot_atomic_grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_on_atomic_grid.html">molecule.plot_on_atomic_grid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
@@ -336,13 +338,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_electron_density.html">molecule.calculate_electron_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_transition_density.html">molecule.calculate_transition_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_hardness.html">molecule.calculate_hardness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_fukui_function.html">molecule.calculate_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">molecule.calculate_softness_kernel_eigenmodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/create_voxel_from_molecule.html">molecular_calculations.create_voxel_from_molecule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../orbitals/create_coordinates_from_voxel.html">molecular_calculations.create_coordinates_from_voxel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/orbital_s.html">molecular_calculations.gaussian_s</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/orbital_p.html">molecular_calculations.gaussian_p</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../orbitals/orbital_d.html">molecular_calculations.gaussian_d</a></li>
@@ -417,7 +416,7 @@
 <h1>molecule.calculate_softness_kernel_eigenmodes<a class="headerlink" href="#molecule-calculate-softness-kernel-eigenmodes" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="molecular_calculations.molecule.calculate_softness_kernel_eigenmodes">
-<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">calculate_softness_kernel_eigenmodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fukui_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mol_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mol_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(100,</span> <span class="pre">100,</span> <span class="pre">100)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.calculate_softness_kernel_eigenmodes" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">calculate_softness_kernel_eigenmodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fukui_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mol_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mol_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.calculate_softness_kernel_eigenmodes" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the softness kernel from the transition densities and the fukui function using the Parr-Berkowitz relation.
 For that, a calculation adding (mol_p) or removing an electron (mol_m) needs to be done with the same geometry.
 This method does not calculate directly the softness kernel, but only the eigenmodes.
@@ -428,8 +427,6 @@ The mathematics behind this function will soon be available somewhere…</p>
 <li><p><strong>mol_p</strong> (<a class="reference internal" href="../objects/molecule.html#objects.molecule" title="objects.molecule"><em>molecule</em></a><em>, </em><em>optional</em>) – The molecule with an electron added. Needed for calculating the softness kernel with a fukui_type of “0” or “+”</p></li>
 <li><p><strong>mol_n</strong> (<a class="reference internal" href="../objects/molecule.html#objects.molecule" title="objects.molecule"><em>molecule</em></a><em>, </em><em>optional</em>) – The molecule with an electron removed. Needed for calculating the softness kernel with a fukui_type of “0” or “-”</p></li>
 <li><p><strong>fukui_type</strong> (<a class="reference internal" href="../objects/molecule.html#objects.molecule" title="objects.molecule"><em>molecule</em></a><em>, </em><em>optional</em>) – The type of fukui function used to calculate the softness kernel. The available types are “0”, “+” or “-”</p></li>
-<li><p><strong>grid_points</strong> (<em>list</em><em> of </em><em>3</em>)</p></li>
-<li><p><strong>delta</strong> (<em>float</em><em>, </em><em>optional</em>) – the length added on all directions of the box containing all atomic centers</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -468,11 +465,11 @@ The mathematics behind this function will soon be available somewhere…</p>
       </div>
     </a>
     <a class="right-next"
-       href="../orbitals/create_voxel_from_molecule.html"
+       href="../orbitals/orbital_s.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">molecular_calculations.create_voxel_from_molecule</p>
+        <p class="prev-next-title">molecular_calculations.gaussian_s</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

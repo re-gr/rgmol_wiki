@@ -52,7 +52,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'quick_start';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Structure" href="data_structure.html" />
+    <link rel="next" title="Grids" href="grids.html" />
     <link rel="prev" title="Installation" href="installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -257,6 +257,7 @@
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grids.html">Grids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
 </ul>
 <ul class="nav bd-sidenav">
@@ -390,6 +391,9 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">atoms</span> <span class="p">(</span><span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">atoms</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">molecule</span><span class="p">)</span>
 <span class="o">*</span> <span class="n">bonds</span> <span class="p">(</span><span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bonds</span> <span class="n">between</span> <span class="n">the</span> <span class="n">atoms</span><span class="p">)</span>
 <span class="o">*</span> <span class="n">properties</span> <span class="p">(</span><span class="n">a</span> <span class="nb">dict</span> <span class="n">containing</span> <span class="n">various</span> <span class="n">properties</span> <span class="n">of</span> <span class="n">the</span> <span class="n">molecule</span> <span class="n">such</span> <span class="k">as</span> <span class="n">Molecular</span> <span class="n">Orbitals</span> <span class="n">arrays</span>
+<span class="o">*</span> <span class="n">name</span> <span class="p">(</span><span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">molecule</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">file</span> <span class="p">(</span><span class="n">the</span> <span class="n">file</span> <span class="n">used</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">the</span> <span class="n">molecule</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">mol_grids</span> <span class="p">(</span><span class="n">the</span> <span class="n">atomic</span> <span class="n">grids</span> <span class="n">used</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The bonds list contains lists of 3 integers : [position in the list of atom 1, position in the list of atom 2, order of the bond]</p>
@@ -497,6 +501,7 @@ Interactive Scene</label><div class="sd-tab-content docutils">
 </section>
 <section id="plotting-multiple-molecules">
 <h2>Plotting Multiple Molecules<a class="headerlink" href="#plotting-multiple-molecules" title="Link to this heading">#</a></h2>
+<p><strong>Group molecules are deprecated for now and may or may not be reimplemented in the future…</strong></p>
 <p>One can plot multiple molecules using the group molecules object.
 They are built using a list of molecules.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rgmol</span>
@@ -554,11 +559,11 @@ Interactive Scene</label><div class="sd-tab-content docutils">
       </div>
     </a>
     <a class="right-next"
-       href="data_structure.html"
+       href="grids.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Structure</p>
+        <p class="prev-next-title">Grids</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

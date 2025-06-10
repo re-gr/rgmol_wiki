@@ -306,6 +306,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_fukui_function.html">molecule.plot_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_diagonalized_kernel.html">molecule.plot_diagonalized_kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot/plot_dipole_moment.html">molecule.plot_dipole_moment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_atomic_grid.html">molecule.plot_atomic_grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot/plot_on_atomic_grid.html">molecule.plot_on_atomic_grid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_radius.html">group_molecules.plot_radius</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_property.html">group_molecules.plot_property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plot_group_molecules/plot_isodensity.html">group_molecules.plot_isodensity</a></li>
@@ -335,13 +337,10 @@
 <li class="toctree-l2"><a class="reference internal" href="calculate_MO_chosen.html">molecule.calculate_MO_chosen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_electron_density.html">molecule.calculate_electron_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculate_transition_density.html">molecule.calculate_transition_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calculate_chosen_transition_density.html">molecule.calculate_chosen_transition_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_hardness.html">molecule.calculate_hardness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_fukui_function.html">molecule.calculate_fukui_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_eigenmodes_linear_response_function.html">molecule.calculate_eigenmodes_linear_response_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cdft/calculate_softness_kernel_eigenmodes.html">molecule.calculate_softness_kernel_eigenmodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_voxel_from_molecule.html">molecular_calculations.create_voxel_from_molecule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_coordinates_from_voxel.html">molecular_calculations.create_coordinates_from_voxel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbital_s.html">molecular_calculations.gaussian_s</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbital_p.html">molecular_calculations.gaussian_p</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orbital_d.html">molecular_calculations.gaussian_d</a></li>
@@ -416,19 +415,18 @@
 <h1>molecule.calculate_MO<a class="headerlink" href="#molecule-calculate-mo" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="molecular_calculations.molecule.calculate_MO">
-<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">calculate_MO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.calculate_MO" title="Link to this definition">#</a></dt>
-<dd><p>Calculate all molecular orbitals for a molecule and puts it in molecule.properties[“MO_calculated”]</p>
-<p>If no voxel were associated with the molecule, it will automatically create a voxel
-If the AO were not calculated it will also calculate them</p>
+<span class="sig-prename descclassname"><span class="pre">molecule.</span></span><span class="sig-name descname"><span class="pre">calculate_MO</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#molecular_calculations.molecule.calculate_MO" title="Link to this definition">#</a></dt>
+<dd><p>Calculate all molecular orbitals for a molecule and puts it in molecule.properties[“MO_calculated_list”]</p>
+<p>If no grids were associated with the molecule, it will automatically create all atomic grids
+If the AO were not calculated it will also calculate them
+By default the MO are normalized to the occupancy of the MO
+That means that in restricted calculations, they are normalized to 2</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>grid_points</strong> (<em>list</em><em> of </em><em>3</em>)</p></li>
-<li><p><strong>delta</strong> (<em>float</em><em>, </em><em>optional</em>) – the length added on all directiosn to the box containing all atomic centers</p></li>
-</ul>
+<dd class="field-odd"><p><strong>None</strong> – All the data needed should already be inside the molecule object</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>MO_calculated</strong> (<em>list of ndarray</em>)</p>
+<dd class="field-even"><p><strong>MO_calculated_list</strong> (<em>list of ndarray</em>)</p>
 </dd>
 </dl>
 </dd></dl>

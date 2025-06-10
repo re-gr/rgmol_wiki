@@ -3,4 +3,4 @@ import rgmol.examples
 
 file = rgmol.examples.molden_H2CO
 mol = rgmol.extract_molden.extract(file,do_order_bonds=1)
-mol.plot_AO(delta=5,grid_points=(80,80,80))
+mol.plot_AO()

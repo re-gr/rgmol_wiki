@@ -8,6 +8,7 @@ Getting Started
 
 * :doc:`Installation<installation>`
 * :doc:`Quick Start<quick_start>`
+* :doc:`Grids<grids>`
 * :doc:`Data Structure<data_structure>`
 
 
@@ -16,6 +17,7 @@ Getting Started
   
   installation
   quick_start
+  grids
   data_structure
    
 Plotting Methods
